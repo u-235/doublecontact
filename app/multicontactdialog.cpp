@@ -11,8 +11,13 @@
  *
  */
 
+#include <QLineEdit>        // for QLineEdit
+#include <QPlainTextEdit>   // for QPlainTextEdit
+#include "contactlist.h"    // for ContactItem
+class QWidget;
+
 #include "multicontactdialog.h"
-#include "ui_multicontactdialog.h"
+#include "ui_multicontactdialog.h"  // for MultiContactDialog
 
 MultiContactDialog::MultiContactDialog(QWidget *parent) :
     QDialog(parent),

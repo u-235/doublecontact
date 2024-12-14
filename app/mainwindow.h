@@ -14,15 +14,25 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QLabel>
-#include <QMainWindow>
-#include <QModelIndexList>
-#include <QSortFilterProxyModel>
-#include <QTableView>
-#include <QWidget>
+#include <QAbstractItemModel>   // for QModelIndexList
+#include <QList>                // for QList
+#include <QMainWindow>          // for QMainWindow
+#include <QObject>              // for Q_OBJECT, slots
+#include <QString>              // for QString
+#include <QStringList>          // for QStringList
+#include <Qt>                   // for SortOrder
+class QCloseEvent;
+class QEvent;
+class QLabel;
+class QShowEvent;
+class QSortFilterProxyModel;
+class QTableView;
+class QWidget;
 
-#include "contactmodel.h"
-#include "recentlist.h"
+#include "formats/iformat.h"    // for FormatType
+#include "recentlist.h"         // for RecentList
+class CSVFile;
+class ContactModel;
 
 namespace Ui {
 class MainWindow;

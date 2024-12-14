@@ -13,14 +13,18 @@
 #ifndef INNERFILEWINDOW_H
 #define INNERFILEWINDOW_H
 
-#include <QDialog>
-#include <QLabel>
-#include <QMenu>
-#include <QSortFilterProxyModel>
-#include <QStatusBar>
+#include <QAbstractItemModel>   // for QModelIndex
+#include <QDialog>              // for QDialog
+#include <QObject>              // for Q_OBJECT, slots
+#include <QString>              // for QString
+#include <Qt>                   // for SortOrder
+class QLabel;
+class QShowEvent;
+class QSortFilterProxyModel;
+class QStatusBar;
 
-#include "contactlist.h"
-#include "innerfilemodel.h"
+class ContactList;
+class InnerFileModel;
 
 namespace Ui {
 class InnerFileWindow;

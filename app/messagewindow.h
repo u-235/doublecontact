@@ -13,15 +13,20 @@
 #ifndef MESSAGEWINDOW_H
 #define MESSAGEWINDOW_H
 
-#include <QDialog>
-#include <QLabel>
-#include <QMenu>
-#include <QSortFilterProxyModel>
-#include <QStatusBar>
+#include <QAbstractItemModel>   // for QModelIndex
+#include <QDialog>              // for QDialog
+#include <QObject>              // for Q_OBJECT, slots
+#include <QString>              // for QString
+#include <Qt>                   // for SortOrder
+class QLabel;
+class QMenu;
+class QShowEvent;
+class QSortFilterProxyModel;
+class QStatusBar;
 
-#include "contactlist.h"
-#include "decodedmessagelist.h"
-#include "messagemodel.h"
+#include "decodedmessagelist.h" // for MessageSourceFlags
+class ContactList;
+class MessageModel;
 
 namespace Ui {
 class MessageWindow;

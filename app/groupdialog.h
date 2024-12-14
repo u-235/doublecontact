@@ -14,9 +14,13 @@
 #ifndef GROUPDIALOG_H
 #define GROUPDIALOG_H
 
-#include <QDialog>
-#include <QShortcut>
-#include "contactmodel.h"
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT, slots
+#include <QString>  // for QString
+class QModelIndex;
+class QShowEvent;
+
+class ContactModel;
 
 namespace Ui {
 class GroupDialog;

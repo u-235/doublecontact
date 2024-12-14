@@ -11,14 +11,18 @@
  *
  */
 
-#include <QPalette>
-#include <QPixmap>
-#include <QVBoxLayout>
+#include <QComboBox>    // for QComboBox
+#include <QGridLayout>  // for QGridLayout
+#include <QGroupBox>    // for QGroupBox
+#include <QLabel>       // for QLabel
+#include <QLineEdit>    // for QLineEdit
+#include <QToolButton>  // for QToolButton
+#include <Qt>           // for LeftArrow, RightArrow, AlignHCenter, MatchExactly
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
 
 #include "comparecontainers.h"
-#include "helpers.h"
-
-#include <iostream>
+#include "globals.h"            // for StandardTypes
+#include "helpers.h"            // for showPhoto
 
 // TODO make arrows up and down (to reorder items), not only left and right
 

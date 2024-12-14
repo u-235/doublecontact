@@ -11,8 +11,14 @@
  *
  */
 
+#include <QCheckBox>        // for QCheckBox
+#include <QDateTime>        // for QDateTime
+#include <QDateTimeEdit>    // for QDateTimeEdit
+#include <QSpinBox>         // for QSpinBox
+class QWidget;
+
 #include "datedetailsdialog.h"
-#include "ui_datedetailsdialog.h"
+#include "ui_datedetailsdialog.h"   // for DateDetailsDialog
 
 DateDetailsDialog::DateDetailsDialog(QWidget *parent) :
     QDialog(parent),

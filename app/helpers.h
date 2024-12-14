@@ -14,14 +14,18 @@
 #ifndef HELPERS_H
 #define HELPERS_H
 
-#include <QtGlobal>
-#include <QHeaderView>
-#include <QItemDelegate>
-#include <QLabel>
-#include <QTableView>
+#include <QItemDelegate>    // for QItemDelegate
+#include <QObject>          // for Q_OBJECT
+#include <QString>          // for QString
+#include <QStyleOption>     // for QStyleOptionViewItem
+class QHeaderView;
+class QLabel;
+class QModelIndex;
+class QTableView;
+class QWidget;
 
-#include "configmanager.h"
-#include "contactlist.h"
+struct InnerFile;
+struct Photo;
 
 // Delegate for making table widgets read only
 // Thanx to Axis - http://axis.bplaced.net/news/460

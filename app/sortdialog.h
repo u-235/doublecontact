@@ -13,8 +13,12 @@
 #ifndef SORTDIALOG_H
 #define SORTDIALOG_H
 
-#include <QDialog>
-#include "contactlist.h"
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT
+#include <QString>  // for QString
+class QWidget;
+
+#include "contactlist.h"    // for ContactList, ContactList::SortType
 
 namespace Ui {
 class SortDialog;

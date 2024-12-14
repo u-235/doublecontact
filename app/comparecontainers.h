@@ -14,15 +14,19 @@
 #ifndef COMPARECONTAINERS_H
 #define COMPARECONTAINERS_H
 
-#include <QComboBox>
-#include <QGridLayout>
-#include <QGroupBox>
-#include <QLabel>
-#include <QLineEdit>
-#include <QObject>
-#include <QStringList>
-#include <QToolButton>
-#include "contactlist.h"
+#include <QList>        // for QList
+#include <QObject>      // for Q_OBJECT, QObject, slots
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+class QComboBox;
+class QGridLayout;
+class QGroupBox;
+class QLabel;
+class QLineEdit;
+class QToolButton;
+
+#include "contactlist.h"    // for DateItem, PostalAddress (ptr only), Email (ptr only), Messenger (ptr only), Phone (ptr only), Photo, TypedStringItem (ptr o...
+class StandardTypes;
 
 class ItemPair: public QObject
 {

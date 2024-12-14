@@ -11,12 +11,16 @@
  *
  */
 
-#include "csvprofiledialog.h"
-#include "ui_csvprofiledialog.h"
+#include <QComboBox>    // for QComboBox
+#include <QStringList>  // for QStringList
+class QWidget;
 
-#include "configmanager.h"
-#include "globals.h"
-#include "languagemanager.h"
+#include "configmanager.h"          // for ConfigManager, configManager
+#include "csvprofiledialog.h"
+#include "formats/files/csvfile.h"  // for CSVFile
+#include "globals.h"                // for S_GENERIC_CSV_PROFILE, S_CSV_PROFILE_SELECT
+#include "languagemanager.h"        // for LanguageManager
+#include "ui_csvprofiledialog.h"    // for CSVProfileDialog
 
 CSVProfileDialog::CSVProfileDialog(QWidget *parent) :
     QDialog(parent),

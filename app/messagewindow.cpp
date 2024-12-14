@@ -11,20 +11,41 @@
  *
  */
 
-#include <QClipboard>
-#include <QFileDialog>
-#include <QFileInfo>
-#include <QItemSelectionModel>
-#include <QMessageBox>
-#include <QShortcut>
-#include <QStringList>
+#include <QAction>                  // for QAction
+#include <QApplication>             // for QApplication, qApp
+#include <QCheckBox>                // for QCheckBox
+#include <QClipboard>               // for QClipboard
+#include <QDir>                     // for QDir
+#include <QFileDialog>              // for QFileDialog, operator|, QFileDialog::DontResolveSymlinks, QFileDialog::ShowDirsOnly
+#include <QFileInfo>                // for QFileInfo
+#include <QHeaderView>              // for QHeaderView
+#include <QItemSelectionModel>      // for QItemSelectionModel
+#include <QLabel>                   // for QLabel
+#include <QLayout>                  // for QLayout
+#include <QList>                    // for QList
+#include <QMenu>                    // for QMenu
+#include <QMessageBox>              // for QMessageBox, QMessageBox::Yes, QMessageBox::No, QMessageBox::Cancel
+#include <QPushButton>              // for QPushButton
+#include <QShortcut>                // for QShortcut
+#include <QSortFilterProxyModel>    // for QSortFilterProxyModel
+#include <QStatusBar>               // for QStatusBar
+#include <QStringList>              // for QStringList
+#include <QTableView>               // for QTableView
+#include <QVariant>                 // for QVariant
+#include <QtGlobal>                 // for qMakeForeachContainer, foreach
+class QShowEvent;
 
+#include "bstring.h"            // for BStringList
+#include "configmanager.h"      // for ConfigManager, configManager
+#include "contactlist.h"        // for ContactList
+#include "corehelpers.h"        // for setQFlag
+#include "extra.h"              // for ExtraData, InnerFiles, InnerFile
+#include "globals.h"            // for S_ERROR, S_CONFIRM, S_SELECT_MMS_DIR_TITLE, SS_MODE, SS_SORT_OFF, SS_SORT_ON, S_INFORM, S_ONLY_ONE_REC, S_REC_NOT_SEL
+#include "helpers.h"            // for readTableSortConfig, writeTableSortConfig, showInnerFile, updateTableConfig
+#include "logwindow.h"          // for LogWindow
+#include "messagemodel.h"       // for MessageModel
 #include "messagewindow.h"
-#include "ui_messagewindow.h"
-#include "configmanager.h"
-#include "corehelpers.h"
-#include "helpers.h"
-#include "logwindow.h"
+#include "ui_messagewindow.h"   // for MessageWindow
 
 MessageWindow::MessageWindow(ContactList* contacts) :
     QDialog(0),

@@ -10,9 +10,13 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
-#include "globals.h"
+
+#include <QRadioButton> // for QRadioButton
+class QWidget;
+
+#include "globals.h"        // for S_FIRST_NAME, S_FULL_NAME, S_GROUP, S_LAST_NAME, S_NICK
 #include "sortdialog.h"
-#include "ui_sortdialog.h"
+#include "ui_sortdialog.h"  // for SortDialog
 
 SortDialog::SortDialog(QWidget *parent) :
     QDialog(parent),

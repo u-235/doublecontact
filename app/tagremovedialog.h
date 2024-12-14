@@ -13,8 +13,13 @@
 #ifndef TAGREMOVEDIALOG_H
 #define TAGREMOVEDIALOG_H
 
-#include <QDialog>
-#include "contactlist.h"
+#include <QDialog>      // for QDialog
+#include <QObject>      // for Q_OBJECT, slots
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+class QWidget;
+
+class ContactList;
 
 namespace Ui {
 class TagRemoveDialog;

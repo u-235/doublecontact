@@ -11,12 +11,19 @@
  *
  */
 
-#include <QApplication>
-#include <QClipboard>
-#include <QPushButton>
+#include <QAbstractButton>  // for QAbstractButton
+#include <QApplication>     // for QApplication, qApp
+#include <QClipboard>       // for QClipboard
+#include <QDialogButtonBox> // for QDialogButtonBox
+#include <QEvent>           // for QEvent, QEvent::LanguageChange
+#include <QLabel>           // for QLabel
+#include <QList>            // for QList
+#include <QListWidget>      // for QListWidget, QListWidgetItem
+#include <QPushButton>      // for QPushButton
+class QWidget;
 
 #include "logwindow.h"
-#include "ui_logwindow.h"
+#include "ui_logwindow.h"   // for LogWindow
 
 LogWindow::LogWindow(QWidget *parent) :
     QDialog(parent),

@@ -14,9 +14,12 @@
 #ifndef LOGWINDOW_H
 #define LOGWINDOW_H
 
-#include <QDialog>
-#include <QStringList>
-#include "contactlist.h"
+#include <QDialog>      // for QDialog
+#include <QObject>      // for Q_OBJECT, slots
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+class QEvent;
+class QWidget;
 
 namespace Ui {
 class LogWindow;

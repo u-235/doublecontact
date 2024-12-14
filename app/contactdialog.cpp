@@ -11,21 +11,48 @@
  *
  */
 
-#include <QClipboard>
-#include <QDialogButtonBox>
-#include <QFileDialog>
-#include <QLineEdit>
-#include <QMessageBox>
+#include <QAction>          // for QAction
+#include <QApplication>     // for QApplication, qApp
+#include <QBoxLayout>       // for QVBoxLayout
+#include <QByteArray>       // for QByteArray
+#include <QCheckBox>        // for QCheckBox
+#include <QClipboard>       // for QClipboard
+#include <QComboBox>        // for QComboBox
+#include <QDateTime>        // for QDateTime
+#include <QDateTimeEdit>    // for QDateTimeEdit
+#include <QDialogButtonBox> // for QDialogButtonBox, operator|, QDialogButtonBox::Cancel, QDialogButtonBox::Ok, QDialogButtonBox::StandardButtons
+#include <QEvent>           // for QEvent, QEvent::LanguageChange
+#include <QFile>            // for QFile
+#include <QFileDialog>      // for QFileDialog
+#include <QGridLayout>      // for QGridLayout
+#include <QGroupBox>        // for QGroupBox
+#include <QIODevice>        // for QIODevice, QIODevice::ReadOnly, QIODevice::WriteOnly
+#include <QLabel>           // for QLabel
+#include <QLineEdit>        // for QLineEdit
+#include <QList>            // for QList
+#include <QListWidget>      // for QListWidget, QListWidgetItem
+#include <QMap>             // for QMap
+#include <QMenu>            // for QMenu
+#include <QMessageBox>      // for QMessageBox
+#include <QPixmap>          // for QPixmap
+#include <QPlainTextEdit>   // for QPlainTextEdit
+#include <QPushButton>      // for QPushButton
+#include <QTabWidget>       // for QTabWidget
+#include <QTableView>       // for QTableView
+#include <QTableWidget>     // for QTableWidget, QTableWidgetItem
+#include <QToolButton>      // for QToolButton
+#include <Qt>               // for operator|, ActionsContextMenu, Dialog, WindowCloseButtonHint
+#include <QtGlobal>         // for qMakeForeachContainer, foreach
+class QWidget;
 
+#include "configmanager.h"      // for ConfigManager, configManager
 #include "contactdialog.h"
-#include "ui_contactdialog.h"
-
-#include "configmanager.h"
-#include "contactlist.h"
-#include "datedetailsdialog.h"
-#include "globals.h"
-#include "helpers.h"
-#include "phonetypedialog.h"
+#include "contactlist.h"        // for PostalAddress, ContactItem, Email, Messenger, Phone, DateItem, Photo, Email::StandardTypes, Messenger::StandardTypes
+#include "datedetailsdialog.h"  // for DateDetailsDialog
+#include "globals.h"            // for S_MIXED_TYPE, S_ERROR, S_ADR_CITY, S_ADR_COUNTRY, S_ADR_EXTENDED, S_ADR_OFFICE_BOX, S_ADR_POST_CODE, S_ADR_REGION
+#include "helpers.h"            // for showPhoto, ReadOnlyTableDelegate
+#include "phonetypedialog.h"    // for PhoneTypeDialog
+#include "ui_contactdialog.h"   // for ContactDialog
 
 #define MIN_VISIBLE_NAMES 1
 #define MIN_VISIBLE_TRIPLETS 1

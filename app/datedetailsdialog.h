@@ -14,9 +14,13 @@
 #ifndef DATEDETAILSDIALOG_H
 #define DATEDETAILSDIALOG_H
 
-#include <QDateTimeEdit>
-#include <QDialog>
-#include "contactlist.h"
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT, slots
+#include <QString>  // for QString
+class QDateTimeEdit;
+class QWidget;
+
+#include "contactlist.h"    // for DateItem
 
 namespace Ui {
 class DateDetailsDialog;

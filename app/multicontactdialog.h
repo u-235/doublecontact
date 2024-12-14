@@ -14,8 +14,12 @@
 #ifndef MULTICONTACTDIALOG_H
 #define MULTICONTACTDIALOG_H
 
-#include <QDialog>
-#include "contactlist.h"
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT
+#include <QString>  // for QString
+class QWidget;
+
+struct ContactItem;
 
 namespace Ui {
 class MultiContactDialog;

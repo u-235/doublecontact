@@ -11,10 +11,17 @@
  *
  */
 
-#include <QFrame>
+#include <QCheckBox>    // for QCheckBox
+#include <QGridLayout>  // for QGridLayout
+#include <QLabel>       // for QLabel
+#include <Qt>           // for AlignTop
+class QWidget;
 
+#include "comparecontainers.h"  // for StringPair, DateItemPair, NamePair, EmailsPair, MessengersPair, PhonesPair, PhotoPair, PostalAddressPair
 #include "comparedialog.h"
-#include "ui_comparedialog.h"
+#include "contactlist.h"        // for ContactItem
+#include "globals.h"            // for S_BDAY, S_DESC, S_FULL_NAME, S_IM, S_NICK, S_ORG, S_PHOTO, S_TITLE, S_URL
+#include "ui_comparedialog.h"   // for CompareDialog
 
 CompareDialog::CompareDialog(QWidget *parent) :
     QDialog(parent),

@@ -11,20 +11,32 @@
  *
  */
 
-#include <QComboBox>
-#include <QDialog>
-#include <QGridLayout>
-#include <QLabel>
-#include <QLineEdit>
-#include <QListWidget>
-#include <QMap>
-#include <QMessageBox>
-#include <QStringList>
-#include <QVBoxLayout>
-#include "globals.h"
+#include <QBoxLayout>       // for QVBoxLayout
+#include <QComboBox>        // for QComboBox
+#include <QDialog>          // for QDialog, QDialog::Accepted
+#include <QDialogButtonBox> // for QDialogButtonBox, operator|, QDialogButtonBox::Cancel, QDialogButtonBox::Ok
+#include <QFont>            // for QFont, QFont::Bold
+#include <QGridLayout>      // for QGridLayout
+#include <QLabel>           // for QLabel
+#include <QLineEdit>        // for QLineEdit
+#include <QList>            // for QList
+#include <QListWidget>      // for QListWidget, QListWidgetItem
+#include <QMap>             // for QMap
+#include <QMessageBox>      // for QMessageBox, QMessageBox::Yes, QMessageBox::No
+#include <QShortcut>        // for QShortcut
+#include <QStringList>      // for QStringList
+#include <QTableWidget>     // for QTableWidget, QTableWidgetItem
+#include <Qt>               // for Key_Delete, Key_Enter, Key_Insert, Key_Return
+#include <QtGlobal>         // for qMakeForeachContainer, foreach
+class QModelIndex;
+class QShowEvent;
+
+#include "contactlist.h"    // for ContactList
+#include "contactmodel.h"   // for ContactModel
+#include "globals.h"        // for S_ERROR, S_CONFIRM, S_GROUP, S_GROUP_NAME, S_REC_NOT_SEL, S_REMOVE_CONFIRM
 #include "groupdialog.h"
-#include "helpers.h"
-#include "ui_groupdialog.h"
+#include "helpers.h"        // for ReadOnlyTableDelegate
+#include "ui_groupdialog.h" // for GroupDialog
 
 #define S_GR_EMPTY QObject::tr("Empty group name")
 #define S_GR_EXISTS QObject::tr("Group already exists")

@@ -11,11 +11,15 @@
  *
  */
 
-#include <QGridLayout>
-#include <QCheckBox>
-#include <QStringList>
+#include <QCheckBox>    // for QCheckBox
+#include <QComboBox>    // for QComboBox
+#include <QGridLayout>  // for QGridLayout
+#include <QStringList>  // for QStringList
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "globals.h"            // for StandardTypes
 #include "phonetypedialog.h"
-#include "ui_phonetypedialog.h"
+#include "ui_phonetypedialog.h" // for PhoneTypeDialog
 
 #define COLUMN_COUNT 3
 PhoneTypeDialog::PhoneTypeDialog(const QString& title, const StandardTypes& sTypes) :

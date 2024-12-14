@@ -11,12 +11,19 @@
  *
  */
 
-#include <QCheckBox>
-#include <QMessageBox>
-#include <QSpacerItem>
-#include "globals.h"
+#include <QCheckBox>    // for QCheckBox
+#include <QGroupBox>    // for QGroupBox
+#include <QLayout>      // for QLayout
+#include <QLayoutItem>  // for QSpacerItem
+#include <QMap>         // for QMap
+#include <QMessageBox>  // for QMessageBox
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+class QWidget;
+
+#include "contactlist.h"        // for ContactList
+#include "globals.h"            // for S_ERROR, S_MASS_TAG_REMOVE
 #include "tagremovedialog.h"
-#include "ui_tagremovedialog.h"
+#include "ui_tagremovedialog.h" // for TagRemoveDialog
 
 TagRemoveDialog::TagRemoveDialog(QWidget *parent) :
     QDialog(parent),

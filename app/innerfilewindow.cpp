@@ -11,22 +11,32 @@
  *
  */
 
-#include <QClipboard>
-#include <QDesktopServices>
-#include <QDir>
-#include <QFileDialog>
-#include <QFileInfo>
-#include <QItemSelectionModel>
-#include <QMessageBox>
-#include <QShortcut>
-#include <QStringList>
-#include <QTemporaryFile>
-#include <QUrl>
+#include <QApplication>             // for QApplication, qApp
+#include <QClipboard>               // for QClipboard
+#include <QDir>                     // for QDir
+#include <QFileDialog>              // for QFileDialog, operator|, QFileDialog::DontResolveSymlinks, QFileDialog::ShowDirsOnly
+#include <QFileInfo>                // for QFileInfo
+#include <QHeaderView>              // for QHeaderView
+#include <QItemSelectionModel>      // for QItemSelectionModel
+#include <QLabel>                   // for QLabel
+#include <QLayout>                  // for QLayout
+#include <QList>                    // for QList
+#include <QMessageBox>              // for QMessageBox
+#include <QShortcut>                // for QShortcut
+#include <QSortFilterProxyModel>    // for QSortFilterProxyModel
+#include <QStatusBar>               // for QStatusBar
+#include <QTableView>               // for QTableView
+#include <QVariant>                 // for QVariant
+class QShowEvent;
 
+#include "configmanager.h"      // for ConfigManager, configManager
+#include "extra.h"              // for InnerFile, S_ATT_FILES_DIR, S_FILES_STATUS, S_SAVE_ATT
+#include "globals.h"            // for S_ERROR, SS_MODE, SS_SORT_OFF, SS_SORT_ON, S_ONLY_ONE_REC, S_REC_NOT_SEL, SortStringRole
+#include "helpers.h"            // for readTableSortConfig, writeTableSortConfig, showInnerFile, updateTableConfig
+#include "innerfilemodel.h"     // for InnerFileModel
 #include "innerfilewindow.h"
-#include "ui_innerfilewindow.h"
-#include "configmanager.h"
-#include "helpers.h"
+#include "ui_innerfilewindow.h" // for InnerFileWindow
+class ContactList;
 
 InnerFileWindow::InnerFileWindow(ContactList* contacts) :
     QDialog(0),

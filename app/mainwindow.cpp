@@ -11,47 +11,77 @@
  *
  */
 
-#include <QClipboard>
+#include <QAction>                  // for QAction
+#include <QApplication>             // for QApplication, qApp
+#include <QBoxLayout>               // for QVBoxLayout
+#include <QClipboard>               // for QClipboard
 #include <QCloseEvent>
-#include <QComboBox>
-#include <QDialogButtonBox>
-#include <QFile>
-#include <QFileDialog>
-#include <QGridLayout>
-#include <QItemSelectionModel>
-#include <QLabel>
-#include <QMessageBox>
-#include <QMimeData>
-#include <QPalette>
-#include <QRadioButton>
-#include <QSpacerItem>
-#include <QStackedWidget>
-#include <QUrl>
+#include <QColor>                   // for QColor
+#include <QComboBox>                // for QComboBox
+#include <QDialog>                  // for QDialog, QDialog::Accepted
+#include <QDialogButtonBox>         // for QDialogButtonBox, operator|, QDialogButtonBox::Cancel, QDialogButtonBox::Ok
+#include <QDir>                     // for QDir
+#include <QDragEnterEvent>          // for QDragEnterEvent
+#include <QDropEvent>               // for QDropEvent
+#include <QEvent>                   // for QDropEvent, QCloseEvent, QEvent, QDragEnterEvent, QEvent::DragEnter, QEvent::Drop
+#include <QFile>                    // for QFile
+#include <QFileDialog>              // for QFileDialog, operator|, QFileDialog::DontResolveSymlinks, QFileDialog::ShowDirsOnly
+#include <QFileInfo>                // for QFileInfo
+#include <QFont>                    // for QFont
+#include <QGridLayout>              // for QGridLayout
+#include <QGroupBox>                // for QGroupBox
+#include <QHeaderView>              // for QHeaderView
+#include <QIODevice>                // for QIODevice, QIODevice::WriteOnly, QIODevice::ReadOnly
+#include <QItemSelectionModel>      // for QItemSelectionModel, QItemSelection, QItemSelectionModel::Select
+#include <QLabel>                   // for QLabel
+#include <QLayout>                  // for QLayout
+#include <QLayoutItem>              // for QSpacerItem
+#include <QLineEdit>                // for QLineEdit
+#include <QMenu>                    // for QMenu
+#include <QMessageBox>              // for QMessageBox, QMessageBox::Yes, QMessageBox::No, QMessageBox::Cancel
+#include <QMimeData>                // for QMimeData
+#include <QPair>                    // for QPair
+#include <QPalette>                 // for QPalette, QPalette::AlternateBase, QPalette::Base, QPalette::Highlight, QPalette::HighlightedText, QPalette::...
+#include <QPushButton>              // for QPushButton
+#include <QSizePolicy>              // for QSizePolicy, QSizePolicy::Expanding, QSizePolicy::Minimum
+#include <QSortFilterProxyModel>    // for QSortFilterProxyModel
+#include <QSplitter>                // for QSplitter
+#include <QStackedWidget>           // for QStackedWidget
+#include <QStatusBar>               // for QStatusBar
+#include <QTableView>               // for QTableView
+#include <QUrl>                     // for QUrl
+#include <QVariant>                 // for QVariant
+#include <QWidget>                  // for QWidget
+#include <QtGlobal>                 // for qMakeForeachContainer, foreach
 
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-
-#include "configmanager.h"
-#include "aboutdialog.h"
+#include "aboutdialog.h"                // for AboutDialog
 #ifdef WITH_CALLS
-#include "callwindow.h"
+#include "callwindow.h"                 // for CallWindow
 #endif
-#include "contactdialog.h"
-#include "comparedialog.h"
-#include "csvprofiledialog.h"
-#include "groupdialog.h"
-#include "helpers.h"
-#include "innerfilewindow.h"
-#include "logwindow.h"
+#include "comparedialog.h"              // for CompareDialog
+#include "configmanager.h"              // for ConfigManager, configManager
+#include "contactdialog.h"              // for ContactDialog
+#include "contactlist.h"                // for ContactItem, ContactList, Photo, COUNTRY_RULES_COUNT, Phone
+#include "contactmodel.h"               // for ContactModel, ContactModel::CompareMain, ContactModel::CompareOpposite, ContactModel::Standard, ContactModel:...
+#include "csvprofiledialog.h"           // for CSVProfileDialog
+#include "formats/common/textreport.h"  // for TextReport::RepItems, TextReport
+#include "formats/formatfactory.h"      // for FormatFactory
+#include "formats/iformat.h"            // for ftDirectory, IFormat, ftAuto, ftFile, ftNew, FormatType
+#include "globals.h"                    // for GlobalConfig, gd, S_ERROR, S_CONFIRM, S_NEW_LIST, SortStringRole, SS_MODE, SS_SORT_OFF, SS_SORT_ON, S_COUNTRY...
+#include "groupdialog.h"                // for GroupDialog
+#include "helpers.h"                    // for readTableSortConfig, updateTableConfig, writeTableSortConfig, showPhoto
+#include "innerfilewindow.h"            // for InnerFileWindow
+#include "logwindow.h"                  // for LogWindow
+#include "mainwindow.h"
 #ifdef WITH_MESSAGES
-#include "messagewindow.h"
+#include "messagewindow.h"              // for MessageWindow
 #endif
-#include "multicontactdialog.h"
-#include "settingsdialog.h"
-#include "sortdialog.h"
-#include "tagremovedialog.h"
-#include "formats/common/textreport.h"
-#include "formats/iformat.h"
+#include "multicontactdialog.h"         // for MultiContactDialog
+#include "settingsdialog.h"             // for SettingsDialog
+#include "sortdialog.h"                 // for SortDialog
+#include "tagremovedialog.h"            // for TagRemoveDialog
+#include "ui_mainwindow.h"              // for MainWindow
+class CSVFile;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

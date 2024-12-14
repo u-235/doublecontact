@@ -14,7 +14,11 @@
 #ifndef LANGUAGESELECTDIALOG_H
 #define LANGUAGESELECTDIALOG_H
 
-#include <QDialog>
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT
+#include <QString>  // for QString
+class QEvent;
+class QWidget;
 
 namespace Ui {
 class LanguageSelectDialog;

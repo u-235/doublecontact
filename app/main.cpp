@@ -11,16 +11,19 @@
  *
  */
 
-#include <QApplication>
-#include <QDir>
-#include <QMessageBox>
-#include <QTranslator>
+#include <QApplication> // for QApplication, qApp
+#include <QDir>         // for QDir
+#include <QList>        // for QList
+#include <QMessageBox>  // for QMessageBox
+#include <QString>      // for QString, operator+
+#include <QStringList>  // for QStringList
 
-#include "configmanager.h"
-#include "languagemanager.h"
-#include "languageselectdialog.h"
-#include "mainwindow.h"
-#include "settingsdialog.h"
+#include "configmanager.h"          // for ConfigManager, configManager
+#include "contactlist.h"            // for Email, Email::StandardTypes, Email::standardTypes, Messenger, Messenger::StandardTypes, Messenger::standardTypes
+#include "globals.h"                // for GlobalConfig, gd, S_WARNING, ContactColumnHeaders, contactColumnHeaders
+#include "languagemanager.h"        // for LanguageManager, languageManager
+#include "languageselectdialog.h"   // for LanguageSelectDialog
+#include "mainwindow.h"             // for MainWindow
 
 int main(int argc, char *argv[])
 {

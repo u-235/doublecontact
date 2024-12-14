@@ -11,10 +11,15 @@
  *
  */
 
-#include <limits.h>
-#include "languagemanager.h"
+#include <limits.h> // for __WORDSIZE
+
+#include <QLabel>       // for QLabel
+#include <QListWidget>  // for QListWidget
+class QWidget;
+
 #include "aboutdialog.h"
-#include "ui_aboutdialog.h"
+#include "languagemanager.h"    // for LanguageManager, languageManager
+#include "ui_aboutdialog.h"     // for AboutDialog
 
 AboutDialog::AboutDialog(QWidget *parent) :
     QDialog(parent),

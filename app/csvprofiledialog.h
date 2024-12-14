@@ -14,8 +14,12 @@
 #ifndef CSVPROFILEDIALOG_H
 #define CSVPROFILEDIALOG_H
 
-#include <QDialog>
-#include "../core/formats/files/csvfile.h"
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT, slots
+#include <QString>  // for QString
+class QWidget;
+
+class CSVFile;
 
 namespace Ui {
 class CSVProfileDialog;

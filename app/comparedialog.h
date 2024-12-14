@@ -14,9 +14,21 @@
 #ifndef COMPAREDIALOG_H
 #define COMPAREDIALOG_H
 
-#include <QCheckBox>
-#include <QDialog>
-#include "comparecontainers.h"
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT
+#include <QString>  // for QString
+class QCheckBox;
+class QWidget;
+
+class DateItemPair;
+class EmailsPair;
+class MessengersPair;
+class NamePair;
+class PhonesPair;
+class PhotoPair;
+class PostalAddressPair;
+class StringPair;
+struct ContactItem;
 
 namespace Ui {
 class CompareDialog;

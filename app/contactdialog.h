@@ -14,19 +14,27 @@
 #ifndef CONTACTDIALOG_H
 #define CONTACTDIALOG_H
 
-#include <QByteArray>
-#include <QComboBox>
-#include <QDateTimeEdit>
-#include <QDialog>
-#include <QGridLayout>
-#include <QListWidgetItem>
-#include <QMenu>
-#include <QResizeEvent>
-#include <QShowEvent>
-#include <QTableWidget>
-#include <QToolButton>
-#include <QVBoxLayout>
-#include "contactlist.h"
+#include <QDialog>      // for QDialog
+#include <QObject>      // for Q_OBJECT, slots
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+class QComboBox;
+class QDateTimeEdit;
+class QEvent;
+class QGridLayout;
+class QLineEdit;
+class QListWidgetItem;
+class QMenu;
+class QResizeEvent;
+class QShowEvent;
+class QTableView;
+class QTableWidget;
+class QToolButton;
+class QVBoxLayout;
+class QWidget;
+
+#include "contactlist.h"    // for ContactList (ptr only), ContactItem (ptr only), DateItem, PostalAddress (ptr only), TagList (ptr only), Email (ptr only)
+class StandardTypes;
 
 namespace Ui {
 class ContactDialog;

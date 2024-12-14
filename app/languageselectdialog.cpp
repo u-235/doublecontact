@@ -11,9 +11,13 @@
  *
  */
 
-#include "languagemanager.h"
+#include <QComboBox>    // for QComboBox
+#include <QEvent>       // for QEvent, QEvent::LanguageChange
+class QWidget;
+
+#include "languagemanager.h"            // for LanguageManager, languageManager
 #include "languageselectdialog.h"
-#include "ui_languageselectdialog.h"
+#include "ui_languageselectdialog.h"    // for LanguageSelectDialog
 
 LanguageSelectDialog::LanguageSelectDialog(QWidget *parent) :
     QDialog(parent),

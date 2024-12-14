@@ -11,16 +11,24 @@
  *
  */
 
-#include <QDesktopServices>
-#include <QFont>
-#include <QHeaderView>
-#include <QMessageBox>
-#include <QPixmap>
-#include <QSortFilterProxyModel>
-#include <QTemporaryFile>
-#include <QUrl>
+#include <QAbstractItemModel>       // for QAbstractItemModel
+#include <QDesktopServices>         // for QDesktopServices
+#include <QFont>                    // for QFont
+#include <QHeaderView>              // for QHeaderView
+#include <QLabel>                   // for QLabel
+#include <QMessageBox>              // for QMessageBox
+#include <QPixmap>                  // for QPixmap
+#include <QSortFilterProxyModel>    // for QSortFilterProxyModel
+#include <QTableView>               // for QTableView
+#include <QTemporaryFile>           // for QTemporaryFile
+#include <QUrl>                     // for QUrl
+#include <Qt>                       // for KeepAspectRatio, SmoothTransformation, SortOrder
+class QWidget;
 
-#include "globals.h"
+#include "configmanager.h"  // for ConfigManager, configManager
+#include "contactlist.h"    // for Photo
+#include "extra.h"          // for InnerFile
+#include "globals.h"        // for GlobalConfig, gd, S_ERROR, S_PH_UNKNOWN_FORMAT, S_READ_ERR, S_WRITE_ERR
 #include "helpers.h"
 
 ReadOnlyTableDelegate::ReadOnlyTableDelegate(bool _silent, QObject* parent)

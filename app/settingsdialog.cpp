@@ -1,14 +1,29 @@
-#include <QApplication>
-#include <QColorDialog>
-#include <QFont>
-#include <QFontDialog>
-#include <QMessageBox>
+#include <QAbstractButton>  // for QAbstractButton
+#include <QButtonGroup>     // for QButtonGroup
+#include <QCheckBox>        // for QCheckBox
+#include <QColor>           // for QColor
+#include <QColorDialog>     // for QColorDialog
+#include <QComboBox>        // for QComboBox
+#include <QFont>            // for QFont
+#include <QFontDialog>      // for QFontDialog
+#include <QLineEdit>        // for QLineEdit
+#include <QList>            // for QList
+#include <QListWidget>      // for QListWidget, QListWidgetItem
+#include <QMessageBox>      // for QMessageBox
+#include <QPushButton>      // for QPushButton
+#include <QRadioButton>     // for QRadioButton
+#include <QStringList>      // for QStringList
+#include <Qt>               // for MatchCaseSensitive
+#include <QtGlobal>         // for qMakeForeachContainer, foreach
+class QWidget;
 
-#include "configmanager.h"
-#include "contactlist.h"
-#include "languagemanager.h"
+#include "configmanager.h"      // for ConfigManager, configManager
+#include "contactlist.h"        // for Phone, Phone::StandardTypes, COUNTRY_RULES_COUNT, Phone::standardTypes
+#include "corehelpers.h"        // for EnumSetting
+#include "globals.h"            // for GlobalConfig, gd, ContactColumnList, ContactColumn, ContactColumnHeaders, GlobalConfig::GroupFormat, GlobalConfig::No...
+#include "languagemanager.h"    // for LanguageManager, languageManager
 #include "settingsdialog.h"
-#include "ui_settingsdialog.h"
+#include "ui_settingsdialog.h"  // for SettingsDialog
 
 SettingsDialog::SettingsDialog(QWidget *parent) :
     QDialog(parent),

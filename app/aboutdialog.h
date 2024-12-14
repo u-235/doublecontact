@@ -14,7 +14,10 @@
 #ifndef ABOUTDIALOG_H
 #define ABOUTDIALOG_H
 
-#include <QDialog>
+#include <QDialog>  // for QDialog
+#include <QObject>  // for Q_OBJECT
+#include <QString>  // for QString
+class QWidget;
 
 namespace Ui {
 class AboutDialog;

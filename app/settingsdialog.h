@@ -1,12 +1,11 @@
 #ifndef SETTINGSDIALOG_H
 #define SETTINGSDIALOG_H
 
-#include <QDialog>
-#include <QListWidgetItem>
-#include <QStringList>
-
-#include "configmanager.h"
-#include "globals.h"
+#include <QDialog>      // for QDialog
+#include <QObject>      // for Q_OBJECT, slots
+#include <QString>      // for QString
+class QListWidgetItem;
+class QWidget;
 
 namespace Ui {
 class SettingsDialog;
