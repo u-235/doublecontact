@@ -25,11 +25,14 @@ Original ZIP package is copyrighted by Gilles Vollant and contributors,
 see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
-#include <QIODevice>
-#include "quazip_global.h"
+#include <stddef.h> // for NULL
 
-#include <zlib.h>
+#include <QIODevice>    // for QIODevice, QIODevice::OpenMode
+#include <QObject>      // for Q_OBJECT
+#include <QString>      // for QString
+#include <QtGlobal>     // for qint64
 
+#include "quazip_global.h"  // for QUAZIP_EXPORT
 class QuaZIODevicePrivate;
 
 /// A class to compress/decompress QIODevice.

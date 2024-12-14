@@ -24,8 +24,8 @@ see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
 #include "quaadler32.h"
-
-#include "zlib.h"
+#include <zconf.h>      // for Bytef
+#include "zlib.h"       // for adler32, Z_NULL
 
 QuaAdler32::QuaAdler32()
 {

@@ -23,8 +23,18 @@ Original ZIP package is copyrighted by Gilles Vollant and contributors,
 see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
+#include <QFile>        // for QFile
+#include <QFileDevice>  // for QFileDevice::Permissions
+#include <QFileInfo>    // for QFileInfo, QFileInfoList
+#include <QIODevice>    // for QIODevice, QIODevice::WriteOnly, QIODevice::ReadOnly
+#include <QtGlobal>     // for qMakeForeachContainer, Q_FOREACH, QFlags, QFlags<>::enum_type, qint64
+
 #include "JlCompress.h"
-#include <QDebug>
+#include "quazip.h"         // for QuaZip, QuaZip::mdCreate, QuaZip::mdUnzip, QuaZip::mdAdd, QuaZip::mdAppend
+#include "quazipfile.h"     // for QuaZipFile
+#include "quazipfileinfo.h" // for QuaZipFileInfo64
+#include "quazipnewinfo.h"  // for QuaZipNewInfo
+#include "unzip.h"          // for UNZ_OK
 
 static bool copyData(QIODevice &inFile, QIODevice &outFile)
 {

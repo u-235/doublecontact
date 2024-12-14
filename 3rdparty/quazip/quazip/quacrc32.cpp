@@ -23,8 +23,8 @@ see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
 #include "quacrc32.h"
-
-#include "zlib.h"
+#include <zconf.h>      // for Bytef
+#include "zlib.h"       // for crc32, Z_NULL
 
 QuaCrc32::QuaCrc32()
 {

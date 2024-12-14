@@ -26,9 +26,11 @@ Original ZIP package is copyrighted by Gilles Vollant and contributors,
 see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
-#include <QByteArray>
+#include <QByteArray>   // for QByteArray
+#include <QtGlobal>     // for quint32
 
-#include "quachecksum32.h"
+#include "quachecksum32.h"  // for QuaChecksum32
+#include "quazip_global.h"  // for QUAZIP_EXPORT
 
 /// Adler32 checksum
 /** \class QuaAdler32 quaadler32.h <quazip/quaadler32.h>

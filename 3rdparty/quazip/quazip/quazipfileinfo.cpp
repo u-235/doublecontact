@@ -22,6 +22,8 @@ Original ZIP package is copyrighted by Gilles Vollant and contributors,
 see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
+#include <Qt>   // for UTC
+
 #include "quazipfileinfo.h"
 
 static QFile::Permissions permissionsFromExternalAttr(quint32 externalAttr) {

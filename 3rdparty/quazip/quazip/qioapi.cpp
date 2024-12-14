@@ -8,20 +8,21 @@
    Modified by Sergey A. Tachenov to integrate with Qt.
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>  // for NULL, SEEK_CUR, SEEK_END, SEEK_SET
 
-#include "zlib.h"
-#include "ioapi.h"
-#include "quazip_global.h"
-#include <QIODevice>
+#include <QIODevice>    // for QIODevice, QIODevice::OpenMode, QIODevice::WriteOnly, QIODevice::ReadOnly, QIODevice::ReadWrite
+#include <QObject>      // for qobject_cast
+#include <QtGlobal>     // for QFlags, qint64, qWarning, QT_VERSION
 #if (QT_VERSION >= 0x050100)
 #define QUAZIP_QSAVEFILE_BUG_WORKAROUND
 #endif
 #ifdef QUAZIP_QSAVEFILE_BUG_WORKAROUND
 #include <QSaveFile>
 #endif
+
+#include <zconf.h>  // for voidpf, uLong
+
+#include "ioapi.h"  // IWYU pragma: associated
 
 /* I've found an old Unix (a SunOS 4.1.3_U1) without all SEEK_* defined.... */
 

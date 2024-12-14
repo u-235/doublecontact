@@ -42,9 +42,8 @@
         #endif
 #endif
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "zlib.h"
+#include <features.h>   // for _LARGEFILE64_SOURCE, __USE_LARGEFILE64
+#include <zconf.h>      // for voidpf, OF, uLong
 
 #if defined(USE_FILE32API)
 #define fopen64 fopen

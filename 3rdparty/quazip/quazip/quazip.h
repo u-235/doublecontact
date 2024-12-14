@@ -25,23 +25,28 @@ Original ZIP package is copyrighted by Gilles Vollant, see
 quazip/(un)zip.h files for details, basically it's zlib license.
  **/
 
-#include <QString>
-#include <QStringList>
-#include <QTextCodec>
+#include <stddef.h> // for NULL
 
-#include "zip.h"
-#include "unzip.h"
+#include <QList>        // for QList
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+#include <Qt>           // for CaseSensitivity
+class QIODevice;
+class QTextCodec;
 
-#include "quazip_global.h"
-#include "quazipfileinfo.h"
+#include "ioapi.h"          // for zlib_filefunc_def
+#include "quazip_global.h"  // for QUAZIP_EXPORT
+#include "unzip.h"          // for unzFile
+#include "zip.h"            // for zipFile
+class QuaZipPrivate;
+struct QuaZipFileInfo64;
+struct QuaZipFileInfo;
 
 // just in case it will be defined in the later versions of the ZIP/UNZIP
 #ifndef UNZ_OPENERROR
 // define additional error code
 #define UNZ_OPENERROR -1000
 #endif
-
-class QuaZipPrivate;
 
 /// ZIP archive.
 /** \class QuaZip quazip.h <quazip/quazip.h>

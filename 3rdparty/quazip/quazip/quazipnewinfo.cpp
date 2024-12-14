@@ -22,12 +22,14 @@ Original ZIP package is copyrighted by Gilles Vollant and contributors,
 see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
-#include <QFileInfo>
-#include <QtGlobal>     // QT_VERSION QT_VERSION_CHECK
+#include <string.h> // for memmove, memset, size_t
+
+#include <QFileInfo>    // for QFileInfo
+#include <Qt>           // for UTC
+#include <QtGlobal>     // for QFlags, QT_VERSION, QT_VERSION_CHECK, qWarning, quint32, quint64
 
 #include "quazipnewinfo.h"
-
-#include <string.h>
+#include "quazipfileinfo.h" // for QuaZipFileInfo, QuaZipFileInfo64
 
 static void QuaZipNewInfo_setPermissions(QuaZipNewInfo *info,
         QFile::Permissions perm, bool isDir, bool isSymLink = false)

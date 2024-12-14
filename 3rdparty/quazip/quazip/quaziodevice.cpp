@@ -22,6 +22,11 @@ Original ZIP package is copyrighted by Gilles Vollant and contributors,
 see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
+#include <string.h> // for NULL, memmove
+
+#include <zconf.h>  // for Bytef, uInt
+#include <zlib.h>   // for z_stream, Z_OK, deflate, deflateEnd, inflate, inflateEnd, Z_BUF_ERROR, Z_SYNC_FLUSH, alloc_func, free_func, Z_DEFAULT_COMPRESSION
+
 #include "quaziodevice.h"
 
 #define QUAZIO_INBUFSIZE 4096

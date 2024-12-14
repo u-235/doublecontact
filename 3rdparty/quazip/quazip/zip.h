@@ -50,14 +50,16 @@
 extern "C" {
 #endif
 
+#include <zconf.h>  // for uInt, ZEXPORT, OF, uLong, voidpf, MAX_MEM_LEVEL, voidp
+
 //#define HAVE_BZIP2
 
 #ifndef _ZLIB_H
-#include "zlib.h"
+#include "zlib.h"   // for Z_ERRNO
 #endif
 
 #ifndef _ZLIBIOAPI_H
-#include "ioapi.h"
+#include "ioapi.h"  // for ZPOS64_T, zlib_filefunc64_32_def, zlib_filefunc64_def, zlib_filefunc_def
 #endif
 
 #ifdef HAVE_BZIP2
