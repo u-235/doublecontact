@@ -5,6 +5,7 @@ DEFINES += WITH_CALLS
 
 include(../core/core.pri)
 include(../model/model.pri)
+include(../common.pri)
 
 QT += gui
 greaterThan(QT_MAJOR_VERSION, 4):QT += widgets

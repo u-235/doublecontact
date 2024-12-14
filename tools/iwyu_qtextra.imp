@@ -1,0 +1,30 @@
+[
+    { include: ['<qcoreevent.h>', 'private', '<QEvent>', 'public'] },
+    { include: ['"qcoreevent.h"', 'private', '<QEvent>', 'public'] },
+    { include: ['<qobjectdefs.h>', 'private', '<QObject>', 'public'] },
+    { include: ['"qobjectdefs.h"', 'private', '<QObject>', 'public'] },
+    { include: ['<qnamespace.h>', 'private', '<Qt>', 'public'] },
+    { include: ['"qnamespace.h"', 'private', '<Qt>', 'public'] },
+    { include: ['<qconfig.h>', 'private', '<QtGlobal>', 'public'] },
+    { include: ['"qconfig.h"', 'private', '<QtGlobal>', 'public'] },
+    { include: ['<qglobal.h>', 'private', '<QtGlobal>', 'public'] },
+    { include: ['"qglobal.h"', 'private', '<QtGlobal>', 'public'] },
+    { include: ['<QtCore/qglobal.h>', 'private', '<QtGlobal>', 'public'] },
+    { include: ['"QtCore/qglobal.h"', 'private', '<QtGlobal>', 'public'] },
+    { include: ['"qtypeinfo.h"', 'private', '<QtGlobal>', 'public'] },
+    { include: ['<qtypeinfo.h>', 'private', '<QtGlobal>', 'public'] },
+
+    { include: ['"qdom.h"', 'private', '<QDomDocument>', 'public'] },
+    { include: ['<qdom.h>', 'private', '<QDomDocument>', 'public'] },
+
+    { symbol:  ['QCloseEvent', 'private', '<QCloseEvent>', 'public'] },
+    { symbol:  ['QDragEnterEvent', 'private', '<QDragEnterEvent>', 'public'] },
+    { symbol:  ['QDropEvent', 'private', '<QDropEvent>', 'public'] },
+    { symbol:  ['QFocusEvent', 'private', '<QFocusEvent>', 'public'] },
+    { symbol:  ['QHelpEvent', 'private', '<QHelpEvent>', 'public'] },
+    { symbol:  ['QKeyEvent', 'private', '<QKeyEvent>', 'public'] },
+    { symbol:  ['QMouseEvent', 'private', '<QMouseEvent>', 'public'] },
+    { symbol:  ['QMoveEvent', 'private', '<QMoveEvent>', 'public'] },
+    { symbol:  ['QResizeEvent', 'private', '<QResizeEvent>', 'public'] },
+    { symbol:  ['QCharRef', 'private',  '<QString>', 'public'] }
+]

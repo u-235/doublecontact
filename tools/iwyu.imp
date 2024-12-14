@@ -1,0 +1,9 @@
+[
+    "ref": "iwyu_clang.imp",
+    "ref": "iwyu_qtcore.imp",
+    "ref": "iwyu_qtgui.imp",
+    "ref": "iwyu_qtnetwork.imp",
+    "ref": "iwyu_qtwidgets.imp",
+    "ref": "iwyu_qtxml.imp",
+    "ref": "iwyu_qtextra.imp"
+]
