@@ -11,8 +11,6 @@
  *
  */
 
-#include <QtGlobal>
-#include <QObject>
 #include "globals.h"
 
 // Visible columns headers

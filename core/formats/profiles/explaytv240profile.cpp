@@ -10,9 +10,15 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
-#include <iostream>
 
+#include <QList>    // for QList
+#include <QString>  // for QString
+
+#include "../../contactlist.h"                  // for ContactItem, Phone, DateItem, Photo
+#include "../files/fileformat.h"                // for FileFormat
 #include "explaytv240profile.h"
+#include "formats/profiles/csvprofilebase.h"    // for LOSS_DATA, CSVProfileBase, CSVProfileBase::CRLFEnding, CSVProfileBase::NeverQuote, S_CSV_ROW_TOO_SHORT
+#include "globals.h"                            // for S_ADDR, S_ANN, S_BDAY, S_DESC, S_EMAIL, S_IM, S_NICK, S_ORG, S_PHOTO, S_SOME_PHONES, S_TITLE, S_URL
 
 ExplayTV240Profile::ExplayTV240Profile()
 {

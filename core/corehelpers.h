@@ -13,12 +13,10 @@
 #ifndef COREHELPERS_H
 #define COREHELPERS_H
 
-#include <algorithm>
-#include <QtGlobal>
-#include <QFlags>
-#include <QSettings>
-#include <QString>
-#include <QStringList>
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+#include <QtGlobal>     // for QT_VERSION, QT_VERSION_CHECK
+class QSettings;
 
 // Enum settings helper
 struct EnumSetting {

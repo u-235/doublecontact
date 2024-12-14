@@ -14,8 +14,14 @@
 #ifndef MPBFILE_H
 #define MPBFILE_H
 
-#include "fileformat.h"
-#include "../common/vcarddata.h"
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+class QIODevice;
+
+#include "../common/vcarddata.h"    // for VCardData
+#include "bstring.h"                // for BString
+#include "fileformat.h"             // for FileFormat
+class ContactList;
 
 class MPBFile : public FileFormat, VCardData
 {

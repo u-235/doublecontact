@@ -10,8 +10,17 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
+
+#include <QDateTime>    // for QDateTime
+#include <QList>        // for QList
+#include <QObject>      // for QObject
+#include <QString>      // for QString, operator+
+
+#include "../../contactlist.h"                  // for ContactItem, DateItem, DateItem::ISOBasic, Photo
+#include "../files/fileformat.h"                // for FileFormat
 #include "explaybm50profile.h"
-#include <iostream>
+#include "formats/profiles/csvprofilebase.h"    // for LOSS_DATA, CSVProfileBase, CSVProfileBase::AlwaysQuote, CSVProfileBase::CRLFEnding, S_CSV_ROW_TOO_SHORT
+#include "globals.h"                            // for S_ADDR, S_ANN, S_BDAY, S_DESC, S_EMAIL, S_IM, S_NICK, S_ORG, S_PHOTO, S_SOME_PHONES, S_TITLE, S_URL
 
 ExplayBM50Profile::ExplayBM50Profile()
 {

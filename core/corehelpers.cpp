@@ -11,7 +11,11 @@
  *
  */
 
-#include <QStringList>
+#include <QList>        // for QList
+#include <QSettings>    // for QSettings
+#include <QStringList>  // for QStringList
+#include <QVariant>     // for QVariant
+
 #include "corehelpers.h"
 
 // Enum settings helper

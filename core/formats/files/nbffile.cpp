@@ -11,17 +11,32 @@
  *
  */
 
-#include <QMap>
-#include <QObject>
-#include <QStringList>
-#include <QTextCodec>
-#include <QTextStream>
-#include "corehelpers.h"
+#include <QByteArray>   // for QByteArray
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::ReadOnly, QIODevice::WriteOnly
+#include <QList>        // for QList
+#include <QMap>         // for QMap
+#include <QObject>      // for QObject
+#include <QStringList>  // for QStringList
+#include <QTextStream>  // for QTextStream, operator<<
+#include <Qt>           // for CaseInsensitive
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+class QTextCodec;
+
+#include <quazip.h>         // for QuaZip, QuaZip::mdUnzip, QuaZip::mdCreate
+#include <quazipdir.h>      // for QuaZipDir
+#include <quazipfile.h>     // for QuaZipFile
+#include <quazipfileinfo.h> // for QuaZipFileInfo64
+#include <quazipnewinfo.h>  // for QuaZipNewInfo
+
+#include "../common/vcarddata.h"        // for VCardData
+#include "bstring.h"                    // for BString, BStringList
+#include "contactlist.h"                // for ContactList, ContactItem
+#include "corehelpers.h"                // for ENDL
+#include "extra.h"                      // for BinarySMS, ExtraData
+#include "formats/files/fileformat.h"   // for FileFormat
+#include "globals.h"                    // for S_READ_ERR, GlobalConfig, GlobalConfig::gfNBF, S_WRITE_ERR
 #include "nbffile.h"
-#include "quazip.h"
-#include "quazipdir.h"
-#include "quazipfile.h"
-#include "../common/vcarddata.h"
 
 #define NBF_VCARD_PATH QString("predefhiddenfolder/backup/WIP/32/contacts")
 #define NBF_SMS_PATH QString("predefmessages")

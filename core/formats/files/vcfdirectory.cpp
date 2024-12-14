@@ -10,15 +10,22 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
-#include "vcfdirectory.h"
-#include <QDir>
-#include <QStringList>
-#include <QTextStream>
 
-#include "bstring.h"
-#include "corehelpers.h"
-#include "globals.h"
-#include "../common/vcarddata.h"
+#include <QByteArray>   // for QByteArray
+#include <QChar>        // for QChar
+#include <QDir>         // for QDir, operator|, QDir::Files, QDir::IgnoreCase, QDir::Name, QDir::Filters
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::ReadOnly, QIODevice::WriteOnly
+#include <QObject>      // for QObject
+#include <QStringList>  // for QStringList
+#include <QtGlobal>     // for qMakeForeachContainer, foreach, uint
+
+#include "../common/vcarddata.h"        // for VCardData
+#include "bstring.h"                    // for BString, BStringList
+#include "contactlist.h"                // for ContactList, ContactItem
+#include "formats/files/fileformat.h"   // for FileFormat
+#include "globals.h"                    // for GlobalConfig, gd
+#include "vcfdirectory.h"
 
 VCFDirectory::VCFDirectory()
     :FileFormat()

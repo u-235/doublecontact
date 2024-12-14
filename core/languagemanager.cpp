@@ -11,22 +11,24 @@
  *
  */
 
-#include <QCoreApplication>
-#include <QDir>
-#include <QFile>
-#include <QLocale>
-#include <QTextCodec>
-#include <QtGlobal>         // QT_VERSION QT_VERSION_CHECK
+#include <QByteArray>           // for QByteArray
+#include <QCoreApplication>     // for QCoreApplication, qApp
+#include <QDir>                 // for QDir
+#include <QFile>                // for QFile
+#include <QIODevice>            // for QIODevice, QIODevice::ReadOnly
+#include <QLocale>              // for QLocale
+#include <QTextCodec>           // for QTextCodec
+#include <QtGlobal>             // for qMakeForeachContainer, foreach, QT_VERSION, QT_VERSION_CHECK
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
-    #include <QRegularExpression>
+    #include <QRegularExpression>   // for QRegularExpression
     #define QRegExp QRegularExpression
 #else
-    #include <QRegExp>
+    #include <QRegExp>              // for QRegExp
 #endif
 
+#include "corehelpers.h"        // for SKIP_EMPTY_PARTS
 #include "languagemanager.h"
-#include "corehelpers.h"
 
 LanguageManager::LanguageManager()
 {

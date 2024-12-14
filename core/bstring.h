@@ -13,11 +13,11 @@
 #ifndef BSTRING_H
 #define BSTRING_H
 
-#include <QByteArray>
-#include <QList>
-#include <QStringList>
-#include <QTextCodec>
-#include <QtGlobal>
+#include <QByteArray>   // for QByteArray
+#include <QList>        // for QList
+#include <QStringList>  // for QStringList
+#include <Qt>           // for CaseSensitive, CaseSensitivity
+class QTextCodec;
 
 class BStringList;
 class BString : public QByteArray

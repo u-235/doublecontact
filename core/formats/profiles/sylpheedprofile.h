@@ -13,8 +13,11 @@
 #ifndef SYLPHEEDPROFILE_H
 #define SYLPHEEDPROFILE_H
 
-#include <QMap>
-#include "csvprofilebase.h"
+#include <QStringList>  // for QStringList
+class QString;
+
+#include "csvprofilebase.h" // for CSVProfileBase
+struct ContactItem;
 
 class SylpheedProfile : public CSVProfileBase
 {

@@ -13,7 +13,11 @@
 #ifndef OSMOPROFILE_H
 #define OSMOPROFILE_H
 
-#include "csvprofilebase.h"
+#include <QStringList>  // for QStringList
+class QString;
+
+#include "csvprofilebase.h" // for CSVProfileBase
+struct ContactItem;
 
 class OsmoProfile : public CSVProfileBase
 {

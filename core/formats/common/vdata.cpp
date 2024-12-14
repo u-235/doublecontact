@@ -11,19 +11,24 @@
  *
  */
 
-#if QT_VERSION >= 0x050000
-#include <QRegularExpression>
-#endif
+#include <iostream> // for char_traits, cout
+#include <iosfwd>   // for ostream
+#include <ostream>  // for operator<<, basic_ostream, endl
 
-#include <QTextCodec>
-#include "globals.h"
-#include "quotedprintable.h"
+#include <QByteArray>   // for QByteArray, operator+, operator==
+#include <QList>        // for QList
+#include <QTextCodec>   // for QTextCodec
+#include <Qt>           // for CaseInsensitive
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "globals.h"            // for S_UNKNOWN_CHARSET, S_UNKNOWN_ENCODING
+#include "quotedprintable.h"    // for QuotedPrintable
 #include "vdata.h"
 
 VData::VData()
 {
 }
-#include <iostream>
+
 QString VData::decodeValue(const BString &src, QStringList& errors) const
 {
     QTextCodec *codec; // for values

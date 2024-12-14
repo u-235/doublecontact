@@ -14,10 +14,11 @@
 #ifndef TEXTREPORT_H
 #define TEXTREPORT_H
 
-#include <QList>
-#include <QPair>
-#include <QString>
-#include "../../contactlist.h"
+#include <QList>    // for QList
+#include <QPair>    // for QPair
+#include <QString>  // for QString
+
+struct ContactItem;
 
 class TextReport
 {

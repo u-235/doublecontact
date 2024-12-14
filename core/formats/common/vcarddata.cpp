@@ -11,18 +11,24 @@
  *
  */
 
-#include <QByteArray>
-#include <QCoreApplication>
-#include <QDir>
-#include <QObject>
-#include <QTextCodec>
-#include <QTextStream>
+#include <QByteArray>       // for operator+, QByteArray, QByteRef, operator!=
+#include <QChar>            // for QChar, operator==
+#include <QCoreApplication> // for QCoreApplication, qApp
+#include <QDateTime>        // for QDateTime, QDate, QTime
+#include <QDir>             // for QDir
+#include <QFile>            // for QFile
+#include <QIODevice>        // for QIODevice, QIODevice::Append, QIODevice::WriteOnly
+#include <QList>            // for QList
+#include <QObject>          // for QObject
+#include <QTextCodec>       // for QTextCodec
+#include <QTextStream>      // for QTextStream
+#include <Qt>               // for CaseInsensitive
+#include <QtGlobal>         // for qMakeForeachContainer, foreach
 
-#include "globals.h"
-#include "quotedprintable.h"
+#include "contactlist.h"        // for ContactItem, Messenger, PostalAddress, Phone, Email, DateItem, Photo, ContactList, TagValue, Phone::StandardTypes, TagList
+#include "globals.h"            // for GlobalConfig, gd, GlobalConfig::VCF21, GlobalConfig::VCF30, GlobalConfig::VCF40, GlobalConfig::VCFVersion, GlobalConfig...
+#include "quotedprintable.h"    // for QuotedPrintable
 #include "vcarddata.h"
-
-#include <iostream>
 
 #define MAX_BASE64_LEN 74
 

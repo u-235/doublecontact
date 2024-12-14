@@ -14,9 +14,10 @@
 #ifndef IFORMAT_H
 #define IFORMAT_H
 
-#include <QString>
-#include <QStringList>
-#include "../contactlist.h"
+#include <QString>  // for QString
+class QStringList;
+
+class ContactList;
 
 enum FormatType {
     ftNew,

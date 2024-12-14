@@ -13,15 +13,17 @@
 #ifndef ASYNCFORMAT_H
 #define ASYNCFORMAT_H
 
-#include <QObject>
-#include "formats/iformat.h"
+#include <QObject>      // for QObject, Q_OBJECT, signals
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "formats/iformat.h"    // for IFormat
+class IAsyncUI;
 
 // Network errors
 #define S_HOST_NOT_FOUND QObject::tr("Server %1 not found")
 #define S_SRV_ERROR QObject::tr("Network error. Server %1 replied: %2")
 #define S_CHECK_CONN QObject::tr("\nCheck username, password, protocol and port")
-
-class IAsyncUI;
 
 class AsyncFormat : public QObject, public IFormat
 {

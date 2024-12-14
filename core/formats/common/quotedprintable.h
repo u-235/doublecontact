@@ -15,10 +15,11 @@
 
 #define MAX_QUOTED_PRINTABLE_LEN 76
 
-#include <QString>
-#include <QStringList>
-#include <QTextCodec>
-#include "bstring.h"
+#include <QByteArray>   // for QByteArray
+#include <QString>      // for QString
+class QTextCodec;
+
+#include "bstring.h"    // for BString, BStringList (ptr only)
 
 class QuotedPrintable
 {

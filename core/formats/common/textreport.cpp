@@ -11,7 +11,11 @@
  *
  */
 
-#include "globals.h"
+#include <QStringList>  // for QStringList
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "contactlist.h"    // for ContactItem, Photo
+#include "globals.h"        // for S_ADDR, S_ANN, S_BDAY, S_DESC, S_EMAIL, S_GROUP, S_IM, S_NICK, S_ORG, S_PHONE, S_PHOTO, S_ROLE, S_TITLE, S_URL
 #include "textreport.h"
 
 //TextReport::TextReport() {}

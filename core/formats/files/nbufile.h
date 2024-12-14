@@ -17,11 +17,15 @@
 #ifndef NBUFILE_H
 #define NBUFILE_H
 
-#include <QtGlobal>
-#include <QDataStream>
-#include <QDateTime>
-#include "fileformat.h"
-#include "../common/vcarddata.h"
+#include <QDateTime>    // for QDateTime
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+#include <QtGlobal>     // for quint8, quint16, quint32, quint64
+class QDataStream;
+
+#include "../common/vcarddata.h"    // for VCardData
+#include "fileformat.h"             // for FileFormat
+class ContactList;
 
 #define NBU_SECT_ID_SIZE 16
 struct NBUSectionType

@@ -10,11 +10,22 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
-#include <QTextCodec>
-#include "quotedprintable.h"
+
+#include <QByteArray>   // for operator==, QByteArray, operator!=
+#include <QDateTime>    // for QDateTime
+#include <QList>        // for QList
+#include <QObject>      // for QObject
+#include <QStringList>  // for QStringList
+#include <QTextCodec>   // for QTextCodec
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "contactlist.h"        // for Phone, ContactList, ContactItem, DateItem
+#include "decodedmessagelist.h" // for DecodedMessage, DecodedMessageList, DecodedMessage::Inbox, DecodedMessage::Sentbox, DecodedMessage::Draft, DecodedMe...
+#include "extra.h"              // for InnerFile, InnerFiles
+#include "globals.h"            // for S_UNKNOWN_MSG_VAL, S_UNKNOWN_MSG_TAG, S_LAST_SECTION, S_UNKNOWN_CHARSET, S_UNKNOWN_ENCODING
+#include "quotedprintable.h"    // for QuotedPrintable
+#include "vcarddata.h"          // for VCardData
 #include "vmessagedata.h"
-#include "vcarddata.h"
-#include "globals.h"
 
 #define S_UNKNOWN_ATT_SUBTYPE QObject::tr("Unknown ATT subtype at line %1: %2")
 

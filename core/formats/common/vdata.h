@@ -13,8 +13,10 @@
 #ifndef VDATA_H
 #define VDATA_H
 
-#include <QStringList>
-#include "bstring.h"
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "bstring.h"    // for BString, BStringList
 
 struct VData
 {

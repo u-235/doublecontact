@@ -13,11 +13,13 @@
 #ifndef CSVPROFILEBASE_H
 #define CSVPROFILEBASE_H
 
-#include <QMap>
-#include <QString>
-#include <QStringList>
-#include "../../contactlist.h"
-#include "../files/fileformat.h"
+#include <QList>        // for QList
+#include <QMap>         // for QMap
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+class ContactList;
+struct ContactItem;
 
 #define S_CSV_ROW_TOO_SHORT QObject::tr("CSV row too short for this profile at line %1")
 

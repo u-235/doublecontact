@@ -13,11 +13,15 @@
 #ifndef NOKIADATA_H
 #define NOKIADATA_H
 
-#include <QByteArray>
-#include <QDataStream>
-#include <QDateTime>
-#include <QStringList>
-#include "../../decodedmessagelist.h"
+#include <QByteArray>   // for QByteArray
+#include <QDateTime>    // for QDateTime
+#include <QString>      // for QString
+#include <QtGlobal>     // for quint64, quint8
+class QStringList;
+
+class DecodedMessageList;
+class QDataStream;
+struct DecodedMessage;
 
 /*
 External references for MMS parser:

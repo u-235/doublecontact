@@ -13,8 +13,11 @@
 #ifndef EXPlAYTV240PROFILE_H
 #define EXPlAYTV240PROFILE_H
 
-#include "csvprofilebase.h"
+#include <QStringList>  // for QStringList
+class QString;
 
+#include "csvprofilebase.h" // for CSVProfileBase
+struct ContactItem;
 
 class ExplayTV240Profile: public CSVProfileBase
 {

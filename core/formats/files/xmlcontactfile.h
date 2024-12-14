@@ -14,9 +14,13 @@
 #ifndef XMLCONTACTFILE_H
 #define XMLCONTACTFILE_H
 
-#include <QDomDocument>
-#include "fileformat.h"
-#include "../common/vcarddata.h"
+#include <QDomDocument> // for QDomDocument
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "../common/vcarddata.h"    // for VCardData
+#include "fileformat.h"             // for FileFormat
+class ContactList;
 
 class XmlContactFile : public FileFormat, QDomDocument, VCardData
 {

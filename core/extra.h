@@ -15,9 +15,12 @@
 #ifndef EXTRA_H
 #define EXTRA_H
 
-#include <QDateTime>
-#include <QStringList>
-#include "bstring.h"
+#include <QByteArray>   // for QByteArray
+#include <QDateTime>    // for QDateTime
+#include <QList>        // for QList
+#include <QString>      // for QString
+
+#include "bstring.h"    // for BStringList
 
 struct CallInfo {
     QString cType, timeStamp, duration, number, name;

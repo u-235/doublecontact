@@ -12,7 +12,15 @@
  *
  */
 
-#include <QTextCodec>
+#include <math.h>   // for ceil
+
+#include <QChar>        // for QChar
+#include <QDataStream>  // for QDataStream
+#include <QList>        // for QList
+#include <QTextCodec>   // for QTextCodec
+
+#include "contactlist.h"        // for Phone, ContactItem, ContactList
+#include "decodedmessagelist.h" // for DecodedMessage, DecodedMessage::Inbox, DecodedMessage::Sentbox
 #include "pdu.h"
 
 PDU::PDU()

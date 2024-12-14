@@ -12,12 +12,16 @@
  *
  */
 
-#include <QFile>
-#include <QDir>
-#include <QObject>
+#include <QDir>         // for QDir
+#include <QFile>        // for QFile
+#include <QFileDevice>  // for QFileDevice, QFileDevice::FileBirthTime, QFileDevice::FileModificationTime
+#include <QIODevice>    // for QIODevice, QIODevice::Append, QIODevice::WriteOnly
+#include <QObject>      // for QObject
+#include <Qt>           // for CaseInsensitive
+#include <QtGlobal>     // for qMakeForeachContainer, foreach, QT_VERSION
 
-#include "globals.h"
 #include "extra.h"
+#include "globals.h"    // for S_MKDIR_ERR, S_WRITE_ERR
 
 #ifdef WITH_CALLS
 QString CallInfo::typeName() const

@@ -1,17 +1,21 @@
-#include "formatfactory.h"
-#include <QFileInfo>
-#include <QObject>
+#include <QFileInfo>    // for QFileInfo
+#include <QObject>      // for QObject
+#include <Qt>           // for CaseInsensitive
+#include <QtGlobal>     // for QT_VERSION
 
-#include "files/csvfile.h"
-#include "files/htmlfile.h"
-#include "files/mpbfile.h"
-#include "files/nbffile.h"
+#include "files/csvfile.h"          // for CSVFile
+#include "files/htmlfile.h"         // for HTMLFile
+#include "files/mpbfile.h"          // for MPBFile
+#include "files/nbffile.h"          // for NBFFile
 #ifndef USE_GPL2
-#include "files/nbufile.h"
+#include "files/nbufile.h"          // for NBUFile
 #endif
-#include "files/udxfile.h"
-#include "files/vcffile.h"
-#include "files/xmlcontactfile.h"
+#include "files/udxfile.h"          // for UDXFile
+#include "files/vcffile.h"          // for VCFFile
+#include "files/xmlcontactfile.h"   // for XmlContactFile
+#include "formatfactory.h"
+#include "globals.h"                // for S_ALL_FILES, S_ALL_SUPPORTED
+class IFormat;
 
 FormatFactory::FormatFactory()
     :error("")

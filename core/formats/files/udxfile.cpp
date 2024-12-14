@@ -11,10 +11,22 @@
  *
  */
 
-#include <QTextCodec>
-#include <QTextStream>
-#include <QSet>
-#include "../common/quotedprintable.h"
+#include <QByteArray>   // for QByteArray
+#include <QChar>        // for QChar
+#include <QDateTime>    // for QDateTime, QDate
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::ReadOnly, QIODevice::WriteOnly
+#include <QList>        // for QList
+#include <QObject>      // for QObject
+#include <QSet>         // for QSet
+#include <QTextCodec>   // for QTextCodec
+#include <QTextStream>  // for QTextStream
+#include <Qt>           // for CaseInsensitive
+#include <QtGlobal>     // for qMakeForeachContainer, foreach, QT_VERSION, QT_VERSION_CHECK
+
+#include "../../contactlist.h"          // for Phone, ContactItem, Email, ContactList, DateItem, TagList, TagValue, DateItem::ISOBasic, Photo
+#include "../common/quotedprintable.h"  // for QuotedPrintable
+#include "formats/files/fileformat.h"   // for FileFormat
 #include "udxfile.h"
 
 UDXFile::UDXFile()

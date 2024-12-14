@@ -10,7 +10,19 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
-#include <QObject>
+
+#include <QDateTime>    // for QDateTime
+#include <QList>        // for QList
+#include <QMap>         // for QMap
+#include <QObject>      // for QObject
+#include <QString>      // for QString, operator<, operator!=
+#include <Qt>           // for CaseInsensitive
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "../../contactlist.h"                  // for Messenger, PostalAddress, ContactItem, Phone, Email, TagList, DateItem, TagValue, Photo
+#include "../files/fileformat.h"
+#include "formats/profiles/csvprofilebase.h"    // for CSVProfileBase, CSVProfileBase::LFEnding, CSVProfileBase::QuoteIfNeed, LOSS_DATA, S_CSV_ROW_TOO_SHORT
+#include "globals.h"                            // for S_ERR_EXTRA_TAG, S_IM, S_PHONE, S_ADDR, S_EMAIL, S_PHOTO
 #include "osmoprofile.h"
 
 // DoubleContact language and Osmo language must be identical

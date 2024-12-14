@@ -11,10 +11,18 @@
  *
  */
 
-#include "corehelpers.h"
+#include <QByteArray>   // for QByteArray
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::ReadOnly, QIODevice::WriteOnly
+#include <QStringList>  // for QStringList
+#include <QTextStream>  // for QTextStream
+#include <Qt>           // for CaseInsensitive
+
+#include "bstring.h"                    // for BString, BStringList
+#include "formats/common/vcarddata.h"   // for VCardData
+#include "formats/files/fileformat.h"   // for FileFormat
 #include "vcffile.h"
-#include <QStringList>
-#include <QTextStream>
+class ContactList;
 
 VCFFile::VCFFile()
     :FileFormat()

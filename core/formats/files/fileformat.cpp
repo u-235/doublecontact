@@ -11,10 +11,8 @@
  *
  */
 
-#include <QObject>
-
 #include "fileformat.h"
-#include "globals.h"
+#include "globals.h"    // for S_ERR_UNSUPPORTED_TAG, S_READ_ERR, S_WRITE_ERR
 
 FileFormat::FileFormat()
 {}

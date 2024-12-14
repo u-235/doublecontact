@@ -14,13 +14,25 @@
  *
  */
 
-#include <QtAlgorithms>
-#include <QDataStream>
-#include <QFile>
-#include <QTextCodec>
-#include <QTextStream>
+#include <ios>      // for dec, hex
+#include <iosfwd>   // for ostream
+#include <iostream> // for cout, char_traits
+#include <ostream>  // for operator<<, basic_ostream, endl
 
-#include "corehelpers.h"
+#include <QByteArray>   // for QByteArray
+#include <QDataStream>  // for QDataStream, QDataStream::LittleEndian
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::ReadOnly
+#include <QList>        // for QList
+#include <QObject>      // for QObject
+#include <QTextCodec>   // for QTextCodec
+
+#include "bstring.h"                    // for BString, BStringList
+#include "contactlist.h"                // for ContactList, ContactItem
+#include "extra.h"                      // for BinarySMS, ExtraData, InnerFiles, InnerFile, Note, Notes
+#include "formats/common/vcarddata.h"   // for VCardData
+#include "formats/files/fileformat.h"   // for FileFormat
+#include "globals.h"                    // for S_SEEK_ERR
 #include "nbufile.h"
 
 #define SUMMARY_OFFSET_OFFSET 0x00000014
@@ -152,7 +164,6 @@ QStringList NBUFile::supportedFilters()
     return (QStringList() << "Nokia NBU (*.nbu *.NBU)");
 }
 
-#include <iostream>
 bool NBUFile::importRecords(const QString &url, ContactList &list, bool append)
 {
     if (!detect(url))

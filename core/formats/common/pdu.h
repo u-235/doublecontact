@@ -15,11 +15,12 @@
 #ifndef PDU_H
 #define PDU_H
 
-#include <math.h>
-#include <QDataStream>
-#include <QDateTime>
-#include <QString>
-#include "../../decodedmessagelist.h"
+#include <QDateTime>    // for QDateTime
+#include <QString>      // for QString
+#include <QtGlobal>     // for quint8
+class QDataStream;
+
+struct DecodedMessage;
 
 class PDU
 {

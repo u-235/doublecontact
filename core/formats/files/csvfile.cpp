@@ -10,16 +10,27 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
-#include <QStringList>
 
-#include <QTextCodec>
+#include <QByteArray>   // for QByteArray
+#include <QChar>        // for QChar
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::ReadOnly, QIODevice::WriteOnly
+#include <QList>        // for QList
+#include <QStringList>  // for QStringList
+#include <QTextCodec>   // for QTextCodec
+#include <QTextStream>  // for QTextStream, operator<<
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "../profiles/explaybm50profile.h"      // for ExplayBM50Profile
+#include "../profiles/explaytv240profile.h"     // for ExplayTV240Profile
+#include "../profiles/genericcsvprofile.h"      // for GenericCSVProfile
+#include "../profiles/osmoprofile.h"            // for OsmoProfile
+#include "../profiles/sylpheedprofile.h"        // for SylpheedProfile
+#include "contactlist.h"                        // for ContactList, ContactItem
+#include "corehelpers.h"                        // for ENDL
 #include "csvfile.h"
-#include "corehelpers.h"
-#include "../profiles/explaybm50profile.h"
-#include "../profiles/explaytv240profile.h"
-#include "../profiles/genericcsvprofile.h"
-#include "../profiles/osmoprofile.h"
-#include "../profiles/sylpheedprofile.h"
+#include "formats/files/fileformat.h"           // for FileFormat
+#include "formats/profiles/csvprofilebase.h"    // for CSVProfileBase, CSVProfileBase::AlwaysQuote, CSVProfileBase::CRLFEnding, CSVProfileBase::NeverQuote
 
 CSVFile::CSVFile()
     :FileFormat(), currentProfile(0),

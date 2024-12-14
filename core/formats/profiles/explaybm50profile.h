@@ -13,8 +13,11 @@
 #ifndef EXPlAYBM50PROFILE_H
 #define EXPlAYBM50PROFILE_H
 
-#include "csvprofilebase.h"
+#include <QStringList>  // for QStringList
+class QString;
 
+#include "csvprofilebase.h" // for CSVProfileBase
+struct ContactItem;
 
 class ExplayBM50Profile: public CSVProfileBase
 {

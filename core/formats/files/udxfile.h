@@ -14,9 +14,12 @@
 #ifndef UDXFILE_H
 #define UDXFILE_H
 
+#include <QDomDocument> // for QDomDocument, QDomElement
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
 
-#include <QDomDocument>
-#include "fileformat.h"
+#include "fileformat.h" // for FileFormat
+class ContactList;
 
 class UDXFile : public FileFormat, QDomDocument
 {

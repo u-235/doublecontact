@@ -11,17 +11,22 @@
  *
  */
 
-#include <QDir>
-#include <QFile>
-#include <QMap>
-#include <QTextCodec>
-#include <QTextStream>
-#include <qglobal.h>
-#include "corehelpers.h"
+#include <QByteArray>   // for QByteArray
+#include <QDataStream>  // for QDataStream
+#include <QDir>         // for QDir
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::WriteOnly
+#include <QObject>      // for QObject
+#include <QTextStream>  // for QTextStream
+#include <QtGlobal>     // for qMakeForeachContainer, foreach, QT_VERSION, QT_VERSION_CHECK, quint8
+
+#include "bstring.h"                        // for BString, BStringList
+#include "corehelpers.h"                    // for sortP
 #include "decodedmessagelist.h"
-#include "formats/common/nokiadata.h"
-#include "formats/common/pdu.h"
-#include "formats/common/vmessagedata.h"
+#include "formats/common/nokiadata.h"       // for NokiaData
+#include "formats/common/pdu.h"             // for PDU
+#include "formats/common/vmessagedata.h"    // for VMessageData
+#include "globals.h"                        // for S_MKDIR_ERR
 
 void DecodedMessage::clear()
 {

@@ -13,10 +13,17 @@
 #ifndef GENERICCSVPROFILE_H
 #define GENERICCSVPROFILE_H
 
-#include <QMap>
-#include "bstring.h"
-#include "csvprofilebase.h"
-#include "../common/vcarddata.h"
+#include <QList>        // for QList
+#include <QMap>         // for QMap
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "../common/vcarddata.h"    // for VCardData
+#include "bstring.h"                // for BStringList
+#include "csvprofilebase.h"         // for CSVProfileBase
+class ContactList;
+struct ContactItem;
+struct TagValue;
 
 class TypeCounter: public QMap<QString, int> {
 public:

@@ -10,6 +10,10 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
+
+#include <QtGlobal> // for qMakeForeachContainer, foreach
+
+#include "contactlist.h"    // for Phone, ContactItem, ContactList (ptr only)
 #include "csvprofilebase.h"
 
 QString CSVProfileBase::name() const

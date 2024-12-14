@@ -11,10 +11,15 @@
  *
  */
 
-#include <algorithm>
-#include <QObject>
+#include <QChar>    // for operator==, QChar
+#include <QHash>    // for QHash
+#include <QObject>  // for QObject
+#include <Qt>       // for CaseInsensitive
+#include <QtGlobal> // for qMakeForeachContainer, foreach, QT_VERSION
+
+#include "bstring.h"        // for BStringList
 #include "contactlist.h"
-#include "corehelpers.h"
+#include "corehelpers.h"    // for sortO, sortP
 
 // Rules for phone number internationalization
 struct CountryRule{

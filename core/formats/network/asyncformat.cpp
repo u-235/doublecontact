@@ -11,7 +11,8 @@
  *
  */
 
-#include <QMutex>
+#include <QMutex>   // for QMutex
+
 #include "asyncformat.h"
 
 AsyncFormat::AsyncFormat()

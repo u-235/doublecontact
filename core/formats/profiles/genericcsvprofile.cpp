@@ -11,8 +11,15 @@
  *
  */
 
+#include <QByteArray>   // for operator+, QByteArray
+#include <QObject>      // for QObject
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "../../contactlist.h"                  // for ContactItem, TagValue, ContactList, DateItem, TagList, Photo
+#include "formats/common/vcarddata.h"           // for VCardData
+#include "formats/profiles/csvprofilebase.h"    // for CSVProfileBase, CSVProfileBase::AlwaysQuote, CSVProfileBase::CRLFEnding
 #include "genericcsvprofile.h"
-#include "globals.h"
+#include "globals.h"                            // for S_GENERIC_CSV_PROFILE
 
 int TypeCounter::totalCount()
 {

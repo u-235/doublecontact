@@ -10,6 +10,11 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
+
+#include <QString>      // for QString
+#include <QTextCodec>   // for QTextCodec
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
 #include "bstring.h"
 
 BString::BString()

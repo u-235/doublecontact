@@ -12,13 +12,23 @@
  *
  */
 
-#include <limits.h>
-#include <QIODevice>
-#include <QTextCodec>
+#include <stdint.h> // for UINT64_MAX
 
+#include <QChar>        // for QChar
+#include <QDataStream>  // for QDataStream
+#include <QIODevice>    // for QIODevice
+#include <QList>        // for QList
+#include <QObject>      // for QObject
+#include <QStringList>  // for QStringList
+#include <QTextCodec>   // for QTextCodec
+#include <Qt>           // for UTC
+
+#include "contactlist.h"        // for Phone, ContactList, ContactItem
+#include "decodedmessagelist.h" // for DecodedMessage, DecodedMessageList, DecodedMessage::Inbox, DecodedMessage::Sentbox, MessageSourceFlags, useBinary
+#include "extra.h"              // for InnerFile, InnerFiles
 #include "nokiadata.h"
-#include "pdu.h"
-#include "quotedprintable.h"
+#include "pdu.h"                // for PDU
+#include "quotedprintable.h"    // for QuotedPrintable
 
 #if !defined(UINT64_MAX)
 #define UINT64_MAX ULLONG_MAX

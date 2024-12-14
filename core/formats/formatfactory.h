@@ -13,9 +13,11 @@
 #ifndef FORMATFACTORY_H
 #define FORMATFACTORY_H
 
-#include <QIODevice>
-#include <QStringList>
-#include "iformat.h"
+#include <QIODevice>    // for QIODevice, QIODevice::OpenMode
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+class IFormat;
 
 class FormatFactory
 {

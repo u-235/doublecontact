@@ -10,11 +10,23 @@
  * (at your option) any later version. See COPYING file for more details.
  *
  */
-#include <qglobal.h>
-#include <QStringList>
-#include <QTextStream>
-#include "bstring.h"
-#include "corehelpers.h"
+
+#include <QByteArray>   // for QByteArray
+#include <QDateTime>    // for QDateTime
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::ReadOnly, QIODevice::WriteOnly
+#include <QList>        // for QList
+#include <QObject>      // for QObject
+#include <QStringList>  // for QStringList
+#include <QTextStream>  // for QTextStream
+#include <QtGlobal>     // for qMakeForeachContainer, foreach
+
+#include "bstring.h"                    // for BString, BStringList
+#include "contactlist.h"                // for ContactList, ContactItem, DateItem, Phone
+#include "extra.h"                      // for CallInfo, ExtraData, Note, Notes
+#include "formats/common/vcarddata.h"   // for VCardData
+#include "formats/files/fileformat.h"   // for FileFormat
+#include "globals.h"                    // for GlobalConfig, gd, GlobalConfig::VCF40, GlobalConfig::gfMPB
 #include "mpbfile.h"
 
 #define S_ERR_NOT_MPB QObject::tr("File isn't MPB file or corrupted")

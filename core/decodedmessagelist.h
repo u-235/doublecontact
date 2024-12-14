@@ -14,9 +14,15 @@
 #ifndef DECODEDMESSAGELIST_H
 #define DECODEDMESSAGELIST_H
 
-#include <QFlags>
-#include "bstring.h"
-#include "contactlist.h"
+#include <QDateTime>    // for QDateTime
+#include <QFlags>       // for QFlags
+#include <QList>        // for QList
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "contactlist.h"    // for ContactList
+#include "extra.h"          // for InnerFiles
+class BStringList;
 
 enum MessageSourceFlag {
     useVMessage        = 0x01,

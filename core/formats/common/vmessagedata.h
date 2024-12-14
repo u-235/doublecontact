@@ -13,10 +13,17 @@
 #ifndef VMESSAGEDATA_H
 #define VMESSAGEDATA_H
 
-#include "bstring.h"
-#include "contactlist.h"
-#include "decodedmessagelist.h"
-#include "vdata.h"
+#include <QString>    // for QString
+#include <QtGlobal>   // for QT_VERSION, QT_VERSION_CHECK
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+	class QStringList;
+#else
+	using QStringList = QList<QString>;
+#endif
+
+#include "bstring.h"  // for BStringList (ptr only), BString
+#include "vdata.h"    // for VData
+class DecodedMessageList;
 
 class VMessageData: public VData
 {

@@ -14,9 +14,11 @@
 #ifndef HTMLFILE_H
 #define HTMLFILE_H
 
-#include <QList>
-#include <QTextStream>
-#include "fileformat.h"
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "fileformat.h" // for FileFormat
+class ContactList;
 
 class HTMLFile : public FileFormat
 {

@@ -13,12 +13,14 @@
 #ifndef VCARDDATA_H
 #define VCARDDATA_H
 
-#include <QFile>
-#include <QStringList>
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+class QFile;
 
-#include "../../contactlist.h"
-#include "bstring.h"
-#include "vdata.h"
+#include "../../contactlist.h"  // for DateItem
+#include "bstring.h"            // for BString, BStringList (ptr only)
+#include "globals.h"            // for GlobalConfig, GlobalConfig::VCFVersion, GlobalConfig::GroupFormat, StandardTypes (ptr only)
+#include "vdata.h"              // for VData
 
 class VCardData: public VData
 {

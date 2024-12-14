@@ -14,8 +14,12 @@
 #ifndef NBFFILE_H
 #define NBFFILE_H
 
-#include "fileformat.h"
-#include "../common/vcarddata.h"
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "../common/vcarddata.h"    // for VCardData
+#include "fileformat.h"             // for FileFormat
+class ContactList;
 
 class NBFFile : public FileFormat, VCardData
 {

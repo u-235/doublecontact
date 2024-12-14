@@ -14,8 +14,12 @@
 #ifndef FILEFORMAT_H
 #define FILEFORMAT_H
 
-#include <QFile>
-#include "../iformat.h"
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::OpenMode
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "../iformat.h" // for IFormat
 
 class FileFormat : public IFormat
 {

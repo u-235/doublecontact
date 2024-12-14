@@ -14,7 +14,10 @@
 #ifndef VCFDIR_H
 #define VCFDIR_H
 
-#include "fileformat.h"
+#include <QString>  // for QString
+
+#include "fileformat.h" // for FileFormat
+class ContactList;
 
 class VCFDirectory : public FileFormat
 {

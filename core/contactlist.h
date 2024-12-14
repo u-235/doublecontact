@@ -14,13 +14,15 @@
 #ifndef CONTACTLIST_H
 #define CONTACTLIST_H
 
-#include <QByteArray>
-#include <QDateTime>
-#include <QMap>
-#include <QStringList>
+#include <QByteArray>   // for QByteArray
+#include <QDateTime>    // for QDateTime
+#include <QList>        // for QList
+#include <QMap>         // for QMap
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
 
-#include "extra.h"
-#include "globals.h"
+#include "extra.h"      // for ExtraData
+#include "globals.h"    // for StandardTypes
 
 #define MAX_COMPARE_PRIORITY_LEVEL 5
 #define COUNTRY_RULES_COUNT 3

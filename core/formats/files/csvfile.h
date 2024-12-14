@@ -14,11 +14,14 @@
 #ifndef CSVFILE_H
 #define CSVFILE_H
 
-#include <QStringList>
-#include <QTextStream>
-#include <QVector>
-#include "../profiles/csvprofilebase.h"
-#include "fileformat.h"
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+#include <QVector>      // for QVector
+class QTextStream;
+
+#include "fileformat.h" // for FileFormat
+class CSVProfileBase;
+class ContactList;
 
 class CSVFile : public FileFormat
 {

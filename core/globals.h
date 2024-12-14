@@ -14,12 +14,13 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-#include <QHash>
-#include <QObject>
-#include <QStringList>
-#include <qnamespace.h>
+#include <QHash>        // for QHash
+#include <QList>        // for QList
+#include <QObject>      // for QObject
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
 
-#include "corehelpers.h"
+#include "corehelpers.h"    // for EnumSetting
 
 // Visible columns
 enum ContactColumn {

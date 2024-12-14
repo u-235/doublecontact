@@ -11,8 +11,13 @@
  *
  */
 
-#include <QByteArray>
-#include <QRegExp>
+#include <QByteArray>   // for QByteArray, operator==, operator+, QByteRef
+#include <QChar>        // for QChar, operator==, operator!=, operator<=, operator>=
+#include <QList>        // for QList
+#include <QRegExp>      // for QRegExp
+#include <QTextCodec>   // for QTextCodec
+#include <QtGlobal>     // for quint8, uchar
+
 #include "quotedprintable.h"
 
 QByteArray QuotedPrintable::decode(const BString &src)

@@ -11,9 +11,15 @@
  *
  */
 
-#include <QDomNodeList>
-#include <QStringList>
-#include <QTextStream>
+#include <QFile>                       // for QFile
+#include <QIODevice>                   // for QIODevice, QIODevice::ReadOnly
+#include <QObject>                     // for QObject
+#include <QStringList>                 // for QStringList
+
+#include "bstring.h"                   // for BString, BStringList
+#include "contactlist.h"               // for ContactList, ContactItem
+#include "formats/common/vcarddata.h"  // for VCardData
+#include "formats/files/fileformat.h"  // for FileFormat
 #include "xmlcontactfile.h"
 
 XmlContactFile::XmlContactFile()

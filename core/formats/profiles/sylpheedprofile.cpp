@@ -11,8 +11,16 @@
  *
  */
 
-#include "sylpheedprofile.h"
+#include <QList>    // for QList
+#include <QObject>  // for QObject
+#include <QString>  // for QString, operator+
+#include <QtGlobal> // for qMakeForeachContainer, foreach
 
+#include "../../contactlist.h"                  // for ContactItem, Email, DateItem, Photo
+#include "../files/fileformat.h"                // for FileFormat
+#include "formats/profiles/csvprofilebase.h"    // for LOSS_DATA, CSVProfileBase, CSVProfileBase::LFEnding, CSVProfileBase::QuoteIfNeed, S_CSV_ROW_TOO_SHORT
+#include "globals.h"                            // for S_ADDR, S_ANN, S_BDAY, S_IM, S_MIDDLE_NAME, S_ORG, S_PHONE, S_PHOTO, S_TITLE, S_URL
+#include "sylpheedprofile.h"
 
 SylpheedProfile::SylpheedProfile()
 {

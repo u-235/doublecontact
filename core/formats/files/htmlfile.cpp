@@ -11,9 +11,19 @@
  *
  */
 
-#include "corehelpers.h"
+#include <QDateTime>    // for QDateTime
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::WriteOnly
+#include <QString>      // for QString
+#include <QTextStream>  // for QTextStream, operator<<
+#include <QtGlobal>     // for qMakeForeachContainer, foreach, QT_VERSION, QT_VERSION_CHECK
+
+#include "../../contactlist.h"      // for ContactList, ContactItem, Photo
+#include "../common/textreport.h"   // for TextReport, TextReport::RepItem, TextReport::RepItems
+#include "corehelpers.h"            // for ENDL
+#include "extra.h"                  // for ExtraData
+#include "globals.h"                // for S_ADDRESS_BOOK, S_HAS_PHOTO
 #include "htmlfile.h"
-#include "../common/textreport.h"
 
 HTMLFile::HTMLFile()
 {

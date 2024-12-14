@@ -14,8 +14,12 @@
 #ifndef VCFFILE_H
 #define VCFFILE_H
 
-#include "fileformat.h"
-#include "../common/vcarddata.h"
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+
+#include "../common/vcarddata.h"    // for VCardData
+#include "fileformat.h"             // for FileFormat
+class ContactList;
 
 class VCFFile : public FileFormat, VCardData
 {
