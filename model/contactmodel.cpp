@@ -11,16 +11,20 @@
  *
  */
 
-#include <algorithm>
-#include <QBrush>
-#include <QFileInfo>
-#include <QMimeData>
-#include <QTextStream>
+#include <algorithm>    // for sort
 
+#include <QBrush>       // for QBrush
+#include <QFileInfo>    // for QFileInfo
+#include <QList>        // for QList<>::iterator, QList
+#include <QMimeData>    // for QMimeData
+
+#include "bstring.h"                     // for BString, BStringList
 #include "contactmodel.h"
-#include "modelhelpers.h"
-#include "formats/common/vcarddata.h"
-#include "formats/files/vcfdirectory.h"
+#include "formats/common/vcarddata.h"   // for VCardData
+#include "formats/files/csvfile.h"      // for CSVFile
+#include "formats/files/vcfdirectory.h" // for VCFDirectory
+#include "modelhelpers.h"               // for emptyItemsToEnd
+#include "recentlist.h"                 // for RecentList
 
 ContactModel::ContactModel(QObject *parent, const QString& source, RecentList& recent) :
     QAbstractTableModel(parent), _source(source), _sourceType(ftNew),

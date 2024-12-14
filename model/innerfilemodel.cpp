@@ -11,11 +11,15 @@
  *
  */
 
-#include <QFile>
-#include <QTextStream>
+#include <QByteArray>   // for QByteArray
+#include <QDateTime>    // for QDateTime
+#include <QList>        // for QList
 
+#include "contactlist.h"    // for ContactList
+#include "extra.h"          // for InnerFiles, ExtraData, InnerFile
+#include "globals.h"        // for SortStringRole
 #include "innerfilemodel.h"
-#include "modelhelpers.h"
+#include "modelhelpers.h"   // for emptyItemsToEnd
 
 InnerFileModel::InnerFileModel(QObject *parent, ContactList *src)
     : QAbstractTableModel(parent), _src(src)

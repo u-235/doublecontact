@@ -11,7 +11,10 @@
  *
  */
 
-#include <QSettings>
+#include <QSettings>    // for QSettings
+#include <QVariant>     // for QVariant
+#include <QtGlobal>     // for QT_VERSION, QT_VERSION_CHECK
+
 #include "recentlist.h"
 
 RecentList::RecentList() : QStringList()

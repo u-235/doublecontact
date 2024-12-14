@@ -13,10 +13,14 @@
 #ifndef CALLMODEL_H
 #define CALLMODEL_H
 
-#include <QAbstractTableModel>
-#include <QString>
+#include <QAbstractItemModel>   // for QModelIndex, QAbstractTableModel
+#include <QObject>              // for Q_OBJECT
+#include <QString>              // for QString
+#include <QStringList>          // for QStringList
+#include <QVariant>             // for QVariant
+#include <Qt>                   // for DisplayRole, Orientation
 
-#include "contactlist.h"
+class ContactList;
 
 enum CallColumn {
     cacType,

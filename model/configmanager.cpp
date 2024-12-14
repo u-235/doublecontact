@@ -11,20 +11,25 @@
  *
  */
 
-#include <QApplication>
-#include <QDir>
-#include <QFile>
-#include <QLocale>
+#include <QApplication>     // for QApplication, qApp
+#include <QDir>             // for QDir
+#include <QFile>            // for QFile
+#include <QList>            // for QList
+#include <QLocale>          // for QLocale
+#include <QSettings>        // for QSettings, QSettings::IniFormat
+#include <QTextCodec>       // for QTextCodec
+#include <QVariant>         // for QVariant
+#include <QtGlobal>         // for QT_VERSION, qMakeForeachContainer, QT_VERSION_CHECK, foreach
 #if QT_VERSION >= 0x050000
-#include <QStandardPaths>
+#include <QStandardPaths>   // for QStandardPaths, QStandardPaths::DocumentsLocation, QStandardPaths::PicturesLocation
 #else
 #include <QDesktopServices>
 #endif
-#include <QTextCodec>
 
 #include "configmanager.h"
-#include "globals.h"
-#include "contactlist.h"
+#include "contactlist.h"    // for ContactList, ContactList::SortByFirstName, ContactList::SortByFullName, ContactList::SortByGroup, ContactList::SortByLastName
+#include "corehelpers.h"    // for setQFlag, EnumSetting
+#include "globals.h"        // for GlobalConfig, gd, ContactColumnList, ContactColumnHeaders, contactColumnHeaders, enGroupFormat, enNlTnPolicy, enPrefVCFVer...
 
 ConfigManager::ConfigManager()
     :settings(0)

@@ -11,11 +11,18 @@
  *
  */
 
-#include <QFile>
-#include <QTextStream>
+#include <QDateTime>    // for QDateTime
+#include <QFile>        // for QFile
+#include <QIODevice>    // for QIODevice, QIODevice::WriteOnly
+#include <QList>        // for QList
+#include <QTextStream>  // for QTextStream
+#include <QtGlobal>     // for qMakeForeachContainer, QT_VERSION, QT_VERSION_CHECK, foreach
 
 #include "callmodel.h"
-#include "modelhelpers.h"
+#include "contactlist.h"    // for ContactList
+#include "extra.h"          // for CallInfo, ExtraData
+#include "globals.h"        // for SortStringRole
+#include "modelhelpers.h"   // for emptyItemsToEnd
 
 CallModel::CallModel(QObject *parent, ContactList *src)
     : QAbstractTableModel(parent), _src(src)

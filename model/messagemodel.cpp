@@ -11,11 +11,15 @@
  *
  */
 
-#include <QString>
+#include <QDateTime>    // for QDateTime
+#include <QList>        // for QList
+#include <QString>      // for QString
+#include <QtGlobal>     // for QT_VERSION
 
-#include "globals.h"
+#include "globals.h"        // for SortStringRole
 #include "messagemodel.h"
-#include "modelhelpers.h"
+#include "modelhelpers.h"   // for emptyItemsToEnd
+class ContactList;
 
 MessageModel::MessageModel(QObject *parent, ContactList* src)
     : QAbstractTableModel(parent), _src(src), msgs(0, 0)

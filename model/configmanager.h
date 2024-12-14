@@ -14,12 +14,12 @@
 #ifndef CONFIGMANAGER_H
 #define CONFIGMANAGER_H
 
-#include <QtGlobal>
-#include <QSettings>
-#include <QStringList>
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
+#include <Qt>           // for SortOrder
+class QSettings;
 
-#include "contactlist.h"
-#include "corehelpers.h"
+#include "contactlist.h"        // for ContactList, ContactList::SortType
 #ifdef WITH_MESSAGES
 #include "decodedmessagelist.h"
 #endif

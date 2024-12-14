@@ -14,8 +14,8 @@
 #ifndef RECENTLIST_H
 #define RECENTLIST_H
 
-#include <QObject>
-#include <QStringList>
+#include <QString>      // for QString
+#include <QStringList>  // for QStringList
 
 #define MAX_RECENT_COUNT 10
 #define S_CLEAR_RECENT QObject::tr("Clear recent list")

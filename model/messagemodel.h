@@ -13,10 +13,15 @@
 #ifndef MESSAGEMODEL_H
 #define MESSAGEMODEL_H
 
-#include <QAbstractTableModel>
+#include <QAbstractItemModel>   // for QModelIndex, QAbstractTableModel
+#include <QObject>              // for Q_OBJECT
+#include <QString>              // for QString
+#include <QStringList>          // for QStringList
+#include <QVariant>             // for QVariant
+#include <Qt>                   // for DisplayRole, Orientation
 
-#include "contactlist.h"
-#include "decodedmessagelist.h"
+#include "decodedmessagelist.h" // for DecodedMessage (ptr only), DecodedMessageList, MessageSourceFlags
+class ContactList;
 
 enum MessageColumn {
     mcDate,

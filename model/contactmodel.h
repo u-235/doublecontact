@@ -14,15 +14,22 @@
 #ifndef CONTACTMODEL_H
 #define CONTACTMODEL_H
 
-#include <QAbstractTableModel>
-#include <QString>
-#include <QVector>
+#include <QAbstractItemModel>   // for QModelIndexList, QModelIndex, QAbstractTableModel
+#include <QObject>              // for Q_OBJECT, signals, slots
+#include <QString>              // for QString
+#include <QStringList>          // for QStringList
+#include <QVariant>             // for QVariant
+#include <Qt>                   // for DropAction, DropActions, ItemFlags, Orientation
+#include <QtGlobal>             // for QT_VERSION
+class QMimeData;
+template <typename T> class QList;
 
-#include "contactlist.h"
-#include "formats/formatfactory.h"
-#include "formats/files/csvfile.h"
-#include "globals.h"
-#include "recentlist.h"
+#include "contactlist.h"            // for ContactItem (ptr only), ContactList, ContactList::SortType
+#include "formats/formatfactory.h"  // for FormatFactory
+#include "formats/iformat.h"        // for FormatType, IFormat (ptr only)
+#include "globals.h"                // for ContactColumnList
+class CSVFile;
+class RecentList;
 
 class ContactModel : public QAbstractTableModel
 {
